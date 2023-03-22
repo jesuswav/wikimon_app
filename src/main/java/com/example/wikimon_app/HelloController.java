@@ -14,6 +14,11 @@ import java.io.File;
 
 public class HelloController {
 
+    //Global variables
+    public boolean view_one;
+    public boolean view_two;
+    public boolean view_three;
+
     //Search button
 
     @FXML
@@ -104,9 +109,20 @@ public class HelloController {
     //Image imagen1 = new Image(getClass().getResourceAsStream("/src/main/resources/Chikorita_E1.jpg"));
     Image imagen1 = new Image(String.valueOf(new File("C:\\Users\\walte\\IdeaProjects\\wikimon_app\\src\\main\\java\\com\\example\\wikimon_app\\Chikorita_E1.jpg")));
 
+    //Button of the first view in the program
+    @FXML
+    private Button button_tittle;
+
+    //Tittle of the first view
+    @FXML
+    private Label label_tittle;
+
     //Function to go to the next view using setVisible -------
     @FXML
-    void pasarVista2(ActionEvent event) {
+    void goToViewTree(ActionEvent event) {
+        view_one = false;
+        view_two = false;
+        view_three = true;
 
         //We make the buttons of view_1 invisible
         button_1.setVisible(false);
@@ -154,12 +170,16 @@ public class HelloController {
 
         pokemon_image.setImage(imagen1);
 
-        //We use the property visible to make this button appears in the view
-        buttonBack.setVisible(true);
+        if (view_three == true){
+            buttonBack.setVisible(true);
+        }
     }
 
     @FXML
-    void goToViewOne(ActionEvent event) {
+    void goToViewTwo(ActionEvent event) {
+        view_one = false;
+        view_two = true;
+        view_three = false;
 
         //We make the buttons of the view1 visible again
         button_1.setVisible(true);
@@ -204,8 +224,15 @@ public class HelloController {
         radio_evolution1.setVisible(false);
         radio_evolution2.setVisible(false);
 
-        buttonBack.setVisible(false);
+        //we make the elements of the first view invisible
+        button_tittle.setVisible(false);
+        label_tittle.setVisible(false);
+
+        if (view_three == true){
+
+        }
     }
+
 
     @FXML
     void showPokemon(ActionEvent event) {

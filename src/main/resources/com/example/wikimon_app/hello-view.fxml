@@ -7,60 +7,60 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wikimon_app.HelloController">
    <children>
-      <ImageView fx:id="imagen_1" fitHeight="130.0" fitWidth="136.0" layoutX="24.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen_1" fitHeight="130.0" fitWidth="136.0" layoutX="24.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_2" fitHeight="130.0" fitWidth="136.0" layoutX="166.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen_2" fitHeight="130.0" fitWidth="136.0" layoutX="166.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_3" fitHeight="130.0" fitWidth="136.0" layoutX="307.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen_3" fitHeight="130.0" fitWidth="136.0" layoutX="307.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_4" fitHeight="130.0" fitWidth="136.0" layoutX="449.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen_4" fitHeight="130.0" fitWidth="136.0" layoutX="449.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_5" fitHeight="130.0" fitWidth="136.0" layoutX="24.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen_5" fitHeight="130.0" fitWidth="136.0" layoutX="24.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_6" fitHeight="130.0" fitWidth="136.0" layoutX="166.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen_6" fitHeight="130.0" fitWidth="136.0" layoutX="166.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_7" fitHeight="130.0" fitWidth="136.0" layoutX="307.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen_7" fitHeight="130.0" fitWidth="136.0" layoutX="307.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_8" fitHeight="130.0" fitWidth="136.0" layoutX="449.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen_8" fitHeight="130.0" fitWidth="136.0" layoutX="449.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <Button fx:id="button_1" layoutX="60.0" layoutY="177.0" mnemonicParsing="false" onAction="#pasarVista2" text="Detalles" />
-      <Button fx:id="button_5" layoutX="60.0" layoutY="339.0" mnemonicParsing="false" onAction="#pasarVista2" text="Detalles" />
-      <Button fx:id="button_2" layoutX="202.0" layoutY="177.0" mnemonicParsing="false" onAction="#pasarVista2" text="Detalles" />
-      <Button fx:id="button_6" layoutX="202.0" layoutY="339.0" mnemonicParsing="false" onAction="#pasarVista2" text="Detalles" />
-      <Button fx:id="button_3" layoutX="343.0" layoutY="177.0" mnemonicParsing="false" onAction="#pasarVista2" text="Detalles" />
-      <Button fx:id="button_7" layoutX="343.0" layoutY="339.0" mnemonicParsing="false" onAction="#pasarVista2" text="Detalles" />
-      <Button fx:id="button_4" layoutX="485.0" layoutY="177.0" mnemonicParsing="false" onAction="#pasarVista2" text="Detalles" />
-      <Button fx:id="button_8" layoutX="485.0" layoutY="339.0" mnemonicParsing="false" onAction="#pasarVista2" text="Detalles" />
+      <Button fx:id="button_1" layoutX="60.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
+      <Button fx:id="button_5" layoutX="60.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
+      <Button fx:id="button_2" layoutX="202.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
+      <Button fx:id="button_6" layoutX="202.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
+      <Button fx:id="button_3" layoutX="343.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
+      <Button fx:id="button_7" layoutX="343.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
+      <Button fx:id="button_4" layoutX="485.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
+      <Button fx:id="button_8" layoutX="485.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
       <TextField layoutX="370.0" layoutY="14.0" />
       <Button fx:id="search_button" layoutX="521.0" layoutY="14.0" mnemonicParsing="false" onAction="#showPokemon" prefHeight="25.0" prefWidth="59.0" text="Buscar" />
-      <Button fx:id="buttonBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToViewOne" text="Atras" visible="false" />
       <ImageView fx:id="pokemon_image" fitHeight="241.0" fitWidth="241.0" layoutX="66.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../../../../java/com/example/wikimon_app/Arbok_E1.png.jpg" />
@@ -80,5 +80,12 @@
       <TextField fx:id="text_category" layoutX="400.0" layoutY="177.0" visible="false" />
       <TextField fx:id="text_element" layoutX="400.0" layoutY="214.0" visible="false" />
       <TextField fx:id="text_pokeball" layoutX="400.0" layoutY="249.0" visible="false" />
+      <Button fx:id="button_tittle" layoutX="255.0" layoutY="223.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="91.0" text="Play" />
+      <Label fx:id="label_tittle" layoutX="218.0" layoutY="150.0" prefHeight="62.0" prefWidth="165.0" text="WIKIMON" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToViewTwo" text="Back" visible="false" />
    </children>
 </AnchorPane>
