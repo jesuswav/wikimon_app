@@ -171,6 +171,7 @@ public class HelloController {
         button_7.setVisible(true);
         button_8.setVisible(true);
 
+        //We make the images of the view1 visible again
         imagen_1.setVisible(true);
         imagen_2.setVisible(true);
         imagen_3.setVisible(true);
@@ -180,6 +181,7 @@ public class HelloController {
         imagen_7.setVisible(true);
         imagen_8.setVisible(true);
 
+        //we make insisible the labels of view2 again
         label_name.setVisible(false);
         label_wigth.setVisible(false);
         label_heigth.setVisible(false);
@@ -187,6 +189,7 @@ public class HelloController {
         label_element.setVisible(false);
         label_pokeball.setVisible(false);
 
+        //we make insisible the TextFields of view2 again
         text_name.setVisible(false);
         text_weigth.setVisible(false);
         text_heigth.setVisible(false);
@@ -194,8 +197,10 @@ public class HelloController {
         text_element.setVisible(false);
         text_pokeball.setVisible(false);
 
+        //we make insisible the image of view2 of view2 again
         pokemon_image.setVisible(false);
 
+        //we make insisible the RadioButtons of view2 of view2 again
         radio_evolution1.setVisible(false);
         radio_evolution2.setVisible(false);
 
