@@ -107,6 +107,8 @@ public class HelloController {
     //Function to go to the next view using setVisible -------
     @FXML
     void pasarVista2(ActionEvent event) {
+
+        //We make the buttons of view_1 invisible
         button_1.setVisible(false);
         button_2.setVisible(false);
         button_3.setVisible(false);
@@ -116,6 +118,7 @@ public class HelloController {
         button_7.setVisible(false);
         button_8.setVisible(false);
 
+        //We make the images of view_1 invisible
         imagen_1.setVisible(false);
         imagen_2.setVisible(false);
         imagen_3.setVisible(false);
@@ -125,6 +128,7 @@ public class HelloController {
         imagen_7.setVisible(false);
         imagen_8.setVisible(false);
 
+        //We make the labels of view_2 visible
         label_name.setVisible(true);
         label_wigth.setVisible(true);
         label_heigth.setVisible(true);
@@ -132,6 +136,7 @@ public class HelloController {
         label_element.setVisible(true);
         label_pokeball.setVisible(true);
 
+        //We make the TextFields of view_2 visible
         text_name.setVisible(true);
         text_weigth.setVisible(true);
         text_heigth.setVisible(true);
