@@ -160,6 +160,8 @@ public class HelloController {
 
     @FXML
     void goToViewOne(ActionEvent event) {
+
+        //We make the buttons of the view1 visible again
         button_1.setVisible(true);
         button_2.setVisible(true);
         button_3.setVisible(true);
