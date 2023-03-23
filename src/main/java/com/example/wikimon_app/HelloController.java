@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.File;
+import java.sql.Connection;
 
 
 public class HelloController {
@@ -204,6 +205,21 @@ public class HelloController {
 
     @FXML
     void goToViewTwo(ActionEvent event) {
+
+        /*ConectionBBDD connection = new ConectionBBDD();
+
+        try (Connection cnx = connection.getConnection()){
+            System.out.println("Successful conection");
+        }catch (Exception e){
+            System.out.println(e);
+        }*/
+
+        //we call to the method that will pull the information from the BBDD
+        PokemonsDAO.readRegisters();
+
+        System.out.println("Ids de los pokemones:");
+        System.out.println(PokemonsDAO.ids);
+
         view_one = false;
         view_two = true;
         view_three = false;
