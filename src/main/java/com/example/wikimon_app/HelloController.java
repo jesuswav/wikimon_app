@@ -121,7 +121,7 @@ public class HelloController {
 
     //objects Image for the ImageView´s
     //Image imagen1 = new Image(getClass().getResourceAsStream("/src/main/resources/Chikorita_E1.jpg"));
-    Image imagen1 = new Image(String.valueOf(new File("C:\\Users\\walte\\IdeaProjects\\wikimon_app\\src\\main\\java\\com\\example\\wikimon_app\\Chikorita_E1.jpg")));
+    Image imagen1 = new Image(String.valueOf(new File("C:\\Users\\walte\\IdeaProjects\\wikimon_app\\src\\main\\java\\com\\example\\wikimon_app\\Pokemones\\Chikorita_E1.jpg")));
 
     //Button of the first view in the program
     @FXML
