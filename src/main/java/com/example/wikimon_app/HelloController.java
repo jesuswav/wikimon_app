@@ -203,6 +203,7 @@ public class HelloController {
         }
     }
 
+    boolean ejecucionRead = false;
     @FXML
     void goToViewTwo(ActionEvent event) {
 
@@ -215,10 +216,16 @@ public class HelloController {
         }*/
 
         //we call to the method that will pull the information from the BBDD
-        PokemonsDAO.readRegisters();
+
+        if (ejecucionRead == false){
+            PokemonsDAO.readRegisters();
+        }
 
         System.out.println("Ids");
         System.out.println(PokemonsDAO.ids);
+        Image imagenSquirtle = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(0))));
+
+        imagen_1.setImage(imagenSquirtle);
 
         view_one = false;
         view_two = true;
@@ -286,14 +293,14 @@ public class HelloController {
         if (view_three == true){
 
         }
+
+        ejecucionRead = true;
     }
 
 
     @FXML
     void showPokemon(ActionEvent event) {
-        Image imagenSquirtle = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(0))));
 
-        imagen_1.setImage(imagenSquirtle);
     }
 
 }
