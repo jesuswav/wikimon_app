@@ -217,7 +217,7 @@ public class HelloController {
         //we call to the method that will pull the information from the BBDD
         PokemonsDAO.readRegisters();
 
-        System.out.println("Ids de los pokemones:");
+        System.out.println("Ids");
         System.out.println(PokemonsDAO.ids);
 
         view_one = false;
@@ -291,7 +291,9 @@ public class HelloController {
 
     @FXML
     void showPokemon(ActionEvent event) {
-        imagen_1.setImage(imagen1);
+        Image imagenSquirtle = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(0))));
+
+        imagen_1.setImage(imagenSquirtle);
     }
 
 }
