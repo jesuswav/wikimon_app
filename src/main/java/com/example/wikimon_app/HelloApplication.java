@@ -19,7 +19,7 @@ public class HelloApplication extends Application {
         stage.show();
 
         //rama master
-        
+
     }
 
     public static void main(String[] args) {

@@ -2,90 +2,116 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wikimon_app.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wikimon_app.HelloController">
    <children>
-      <ImageView fx:id="imagen_1" fitHeight="130.0" fitWidth="136.0" layoutX="24.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_1" fitHeight="153.0" fitWidth="165.0" layoutX="24.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_2" fitHeight="130.0" fitWidth="136.0" layoutX="166.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_2" fitHeight="153.0" fitWidth="159.0" layoutX="219.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_3" fitHeight="130.0" fitWidth="136.0" layoutX="307.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_3" fitHeight="153.0" fitWidth="153.0" layoutX="409.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_4" fitHeight="130.0" fitWidth="136.0" layoutX="449.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_4" fitHeight="153.0" fitWidth="165.0" layoutX="602.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_5" fitHeight="130.0" fitWidth="136.0" layoutX="24.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_5" fitHeight="153.0" fitWidth="165.0" layoutX="25.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_6" fitHeight="130.0" fitWidth="136.0" layoutX="166.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_6" fitHeight="153.0" fitWidth="172.0" layoutX="219.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_7" fitHeight="130.0" fitWidth="136.0" layoutX="307.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_7" fitHeight="153.0" fitWidth="183.0" layoutX="409.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_8" fitHeight="130.0" fitWidth="136.0" layoutX="449.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_8" fitHeight="153.0" fitWidth="176.0" layoutX="602.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <Button fx:id="button_1" layoutX="60.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
-      <Button fx:id="button_5" layoutX="60.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
-      <Button fx:id="button_2" layoutX="202.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
-      <Button fx:id="button_6" layoutX="202.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
-      <Button fx:id="button_3" layoutX="343.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
-      <Button fx:id="button_7" layoutX="343.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
-      <Button fx:id="button_4" layoutX="485.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
-      <Button fx:id="button_8" layoutX="485.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToViewTree" text="Detalles" visible="false" />
-      <TextField layoutX="370.0" layoutY="14.0" />
-      <Button fx:id="search_button" layoutX="521.0" layoutY="14.0" mnemonicParsing="false" onAction="#showPokemon" prefHeight="25.0" prefWidth="59.0" text="Buscar" />
-      <ImageView fx:id="pokemon_image" fitHeight="241.0" fitWidth="241.0" layoutX="66.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <Button fx:id="button_1" layoutX="24.0" layoutY="202.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_5" layoutX="24.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_2" layoutX="218.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_6" layoutX="220.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_3" layoutX="409.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_7" layoutX="410.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_4" layoutX="602.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_8" layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <TextField fx:id="searchText" layoutX="559.0" layoutY="14.0" visible="false" />
+      <Button fx:id="search_button" layoutX="716.0" layoutY="14.0" mnemonicParsing="false" onAction="#showPokemon" prefHeight="25.0" prefWidth="59.0" text="Buscar" visible="false" />
+      <ImageView fx:id="pokemon_image" fitHeight="282.0" fitWidth="305.0" layoutX="66.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../../../../java/com/example/wikimon_app/Arbok_E1.png.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="label_name" layoutX="349.0" layoutY="68.0" text="Nombre:" visible="false" />
-      <Label fx:id="label_wigth" layoutX="363.0" layoutY="104.0" text="Peso:" visible="false" />
-      <Label fx:id="label_heigth" layoutX="359.0" layoutY="143.0" text="Altura:" visible="false" />
-      <Label fx:id="label_category" layoutX="343.0" layoutY="181.0" text="Categoria:" visible="false" />
-      <Label fx:id="label_element" layoutX="345.0" layoutY="218.0" text="Elemento" visible="false" />
-      <Label fx:id="label_pokeball" layoutX="344.0" layoutY="253.0" text="Pokebola:" visible="false" />
-      <RadioButton fx:id="radio_evolution1" layoutX="92.0" layoutY="295.0" mnemonicParsing="false" text="Evolucion 1" visible="false" />
-      <RadioButton fx:id="radio_evolution2" layoutX="202.0" layoutY="295.0" mnemonicParsing="false" text="Evolucion 2" visible="false" />
-      <TextField fx:id="text_name" layoutX="400.0" layoutY="64.0" visible="false" />
-      <TextField fx:id="text_weigth" layoutX="400.0" layoutY="100.0" visible="false" />
-      <TextField fx:id="text_heigth" layoutX="400.0" layoutY="139.0" visible="false" />
-      <TextField fx:id="text_category" layoutX="400.0" layoutY="177.0" visible="false" />
-      <TextField fx:id="text_element" layoutX="400.0" layoutY="214.0" visible="false" />
-      <TextField fx:id="text_pokeball" layoutX="400.0" layoutY="249.0" visible="false" />
-      <Button fx:id="button_tittle" layoutX="255.0" layoutY="223.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="91.0" text="Play" />
-      <Label fx:id="label_tittle" layoutX="218.0" layoutY="150.0" prefHeight="62.0" prefWidth="165.0" text="WIKIMON" textAlignment="RIGHT" wrapText="true">
+      <Label fx:id="label_name" layoutX="382.0" layoutY="45.0" text="Nombre:" visible="false" />
+      <Label fx:id="label_wigth" layoutX="396.0" layoutY="81.0" text="Peso:" visible="false" />
+      <Label fx:id="label_heigth" layoutX="392.0" layoutY="118.0" text="Altura:" visible="false" />
+      <Label fx:id="label_category" layoutX="376.0" layoutY="156.0" text="Categoria:" visible="false" />
+      <Label fx:id="label_element" layoutX="377.0" layoutY="193.0" text="Elemento:" visible="false" />
+      <Label fx:id="label_pokeball" layoutX="377.0" layoutY="230.0" text="Pokebola:" visible="false" />
+      <TextField fx:id="text_name" layoutX="433.0" layoutY="41.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+      <TextField fx:id="text_weigth" layoutX="433.0" layoutY="77.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+      <TextField fx:id="text_heigth" layoutX="433.0" layoutY="114.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+      <TextField fx:id="text_category" layoutX="433.0" layoutY="152.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+      <TextField fx:id="text_element" layoutX="433.0" layoutY="189.0" visible="false" />
+      <TextField fx:id="text_pokeball" layoutX="433.0" layoutY="226.0" visible="false" />
+      <Button fx:id="button_tittle" layoutX="352.0" layoutY="213.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="91.0" text="Play" />
+      <Label fx:id="label_tittle" layoutX="315.0" layoutY="150.0" prefHeight="62.0" prefWidth="165.0" text="WIKIMON" textAlignment="RIGHT" wrapText="true">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
       <Button fx:id="buttonBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToViewTwo" text="Back" visible="false" />
+      <ImageView fx:id="img_evolucion1" fitHeight="91.0" fitWidth="91.0" layoutX="640.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/wikimon_app/Arbok_E1.png.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_evolucion2" fitHeight="91.0" fitWidth="103.0" layoutX="640.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/wikimon_app/Arbok_E1.png.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="similar_pokemon1" fitHeight="103.0" fitWidth="107.0" layoutX="65.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/wikimon_app/Arbok_E1.png.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="similar_pokemon2" fitHeight="103.0" fitWidth="107.0" layoutX="176.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/wikimon_app/Arbok_E1.png.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="similar_pokemon3" fitHeight="103.0" fitWidth="107.0" layoutX="288.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/wikimon_app/Arbok_E1.png.jpg" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="text_area_descripcion" layoutX="433.0" layoutY="269.0" prefHeight="146.0" prefWidth="320.0" visible="false" />
+      <Label fx:id="label_descripcion" layoutX="364.0" layoutY="269.0" text="Descripción:" visible="false" />
+      <Label layoutX="650.0" layoutY="31.0" text="Evoluciones:" visible="false" />
    </children>
 </AnchorPane>

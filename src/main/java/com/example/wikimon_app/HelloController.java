@@ -2,10 +2,7 @@ package com.example.wikimon_app;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -19,10 +16,12 @@ public class HelloController {
     public boolean view_two;
     public boolean view_three;
 
-    //Search button
+    //Search button and TextField
 
     @FXML
     private Button search_button;
+    @FXML
+    private TextField searchText;
 
     //Buttons of vista1
     @FXML
@@ -98,11 +97,26 @@ public class HelloController {
     @FXML
     private TextField text_weigth;
 
-    //Radio Buttons to select the evlution of the caracter in the image
+    //image views for similar pokemons
     @FXML
-    private RadioButton radio_evolution1;
+    private ImageView similar_pokemon1;
     @FXML
-    private RadioButton radio_evolution2;
+    private ImageView similar_pokemon2;
+    @FXML
+    private ImageView similar_pokemon3;
+
+    //TextArea and label for the description of the pokemon
+    @FXML
+    private TextArea text_area_descripcion;
+    @FXML
+    private Label label_descripcion;
+
+    //ImageView for evolutions of the pokemon
+    @FXML
+    private ImageView img_evolucion1;
+    @FXML
+    private ImageView img_evolucion2;
+
 
 
     //objects Image for the ImageView´s
@@ -162,14 +176,27 @@ public class HelloController {
 
         pokemon_image.setVisible(true);
 
-        radio_evolution1.setVisible(true);
-        radio_evolution2.setVisible(true);
+        //modifications of the visible property for the last objects of view3
+        similar_pokemon1.setVisible(true);
+        similar_pokemon2.setVisible(true);
+        similar_pokemon3.setVisible(true);
 
+        text_area_descripcion.setVisible(true);
+
+        img_evolucion1.setVisible(true);
+        img_evolucion2.setVisible(true);
+        label_descripcion.setVisible(true);
 
         //Set the values fot the view two
-
         pokemon_image.setImage(imagen1);
+        similar_pokemon1.setImage(imagen1);
+        similar_pokemon2.setImage(imagen1);
+        similar_pokemon3.setImage(imagen1);
 
+        img_evolucion1.setImage(imagen1);
+        img_evolucion2.setImage(imagen1);
+
+        //Button of back to the view one
         if (view_three == true){
             buttonBack.setVisible(true);
         }
@@ -220,14 +247,26 @@ public class HelloController {
         //we make insisible the image of view2 of view2 again
         pokemon_image.setVisible(false);
 
-        //we make insisible the RadioButtons of view2 of view2 again
-        radio_evolution1.setVisible(false);
-        radio_evolution2.setVisible(false);
-
         //we make the elements of the first view invisible
         button_tittle.setVisible(false);
         label_tittle.setVisible(false);
 
+        //we make visible the button of search and the TextField
+        search_button.setVisible(true);
+        searchText.setVisible(true);
+
+        //modifications of the visible property for the last objects of view3
+        similar_pokemon1.setVisible(false);
+        similar_pokemon2.setVisible(false);
+        similar_pokemon3.setVisible(false);
+
+        text_area_descripcion.setVisible(false);
+        label_descripcion.setVisible(false);
+
+        img_evolucion1.setVisible(false);
+        img_evolucion2.setVisible(false);
+
+        //--------
         if (view_three == true){
 
         }
