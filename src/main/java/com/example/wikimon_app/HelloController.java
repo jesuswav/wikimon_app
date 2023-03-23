@@ -216,7 +216,7 @@ public class HelloController {
         }*/
 
         //we call to the method that will pull the information from the BBDD
-
+        //conditional to check if the method is already called
         if (ejecucionRead == false){
             PokemonsDAO.readRegisters();
         }
@@ -300,7 +300,7 @@ public class HelloController {
 
     @FXML
     void showPokemon(ActionEvent event) {
-
+        imagen_1.setImage(imagen1);
     }
 
 }
