@@ -61,58 +61,82 @@
       <Button fx:id="button_8" layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
       <TextField fx:id="searchText" layoutX="559.0" layoutY="14.0" visible="false" />
       <Button fx:id="search_button" layoutX="716.0" layoutY="14.0" mnemonicParsing="false" onAction="#showPokemon" prefHeight="25.0" prefWidth="59.0" text="Buscar" visible="false" />
-      <ImageView fx:id="pokemon_image" fitHeight="257.0" fitWidth="280.0" layoutX="33.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pokemon_image" fitHeight="257.0" fitWidth="280.0" layoutX="33.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <Label fx:id="label_name" layoutX="345.0" layoutY="64.0" text="Nombre:" />
-      <Label fx:id="label_wigth" layoutX="359.0" layoutY="100.0" text="Peso:" />
-      <Label fx:id="label_heigth" layoutX="355.0" layoutY="137.0" text="Altura:" />
-      <Label fx:id="label_category" layoutX="339.0" layoutY="175.0" text="Categoria:" />
-      <Label fx:id="label_element" layoutX="340.0" layoutY="212.0" text="Elemento:" />
-      <Label fx:id="label_pokeball" layoutX="340.0" layoutY="249.0" text="Pokebola:" />
-      <TextField fx:id="text_name" layoutX="396.0" layoutY="60.0" prefHeight="25.0" prefWidth="186.0" />
-      <TextField fx:id="text_weigth" layoutX="396.0" layoutY="96.0" prefHeight="25.0" prefWidth="186.0" />
-      <TextField fx:id="text_heigth" layoutX="396.0" layoutY="133.0" prefHeight="25.0" prefWidth="186.0" />
-      <TextField fx:id="text_category" layoutX="396.0" layoutY="171.0" prefHeight="25.0" prefWidth="186.0" />
-      <TextField fx:id="text_element" layoutX="396.0" layoutY="208.0" prefHeight="25.0" prefWidth="186.0" />
-      <TextField fx:id="text_pokeball" layoutX="396.0" layoutY="245.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label fx:id="label_name" layoutX="345.0" layoutY="64.0" text="Nombre:" visible="false" />
+      <Label fx:id="label_wigth" layoutX="359.0" layoutY="100.0" text="Peso:" visible="false" />
+      <Label fx:id="label_heigth" layoutX="355.0" layoutY="137.0" text="Altura:" visible="false" />
+      <Label fx:id="label_category" layoutX="339.0" layoutY="175.0" text="Categoria:" visible="false" />
+      <Label fx:id="label_element" layoutX="340.0" layoutY="212.0" text="Elemento:" visible="false" />
+      <Label fx:id="label_pokeball" layoutX="340.0" layoutY="249.0" text="Pokebola:" visible="false" />
+      <TextField fx:id="text_name" layoutX="396.0" layoutY="60.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
+      <TextField fx:id="text_weigth" layoutX="396.0" layoutY="96.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
+      <TextField fx:id="text_heigth" layoutX="396.0" layoutY="133.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
+      <TextField fx:id="text_category" layoutX="396.0" layoutY="171.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
+      <TextField fx:id="text_element" layoutX="396.0" layoutY="208.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
+      <TextField fx:id="text_pokeball" layoutX="396.0" layoutY="245.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
       <Button fx:id="button_tittle" layoutX="352.0" layoutY="213.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="91.0" text="Play" visible="false" />
       <Label fx:id="label_tittle" layoutX="315.0" layoutY="150.0" prefHeight="62.0" prefWidth="165.0" text="WIKIMON" textAlignment="RIGHT" visible="false" wrapText="true">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="buttonBack" layoutX="13.0" layoutY="1.0" mnemonicParsing="false" onAction="#goToViewTwo" text="Back" />
-      <ImageView fx:id="img_evolucion1" fitHeight="103.0" fitWidth="103.0" layoutX="360.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="buttonBack" layoutX="13.0" layoutY="1.0" mnemonicParsing="false" onAction="#goToViewTwo" text="Back" visible="false" />
+      <ImageView fx:id="img_evolucion1" fitHeight="103.0" fitWidth="103.0" layoutX="360.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img_evolucion2" fitHeight="103.0" fitWidth="113.0" layoutX="497.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img_evolucion2" fitHeight="103.0" fitWidth="113.0" layoutX="497.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="similar_pokemon1" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="similar_pokemon1" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="similar_pokemon2" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="similar_pokemon2" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="similar_pokemon3" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="similar_pokemon3" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <TextArea fx:id="text_area_descripcion" layoutX="35.0" layoutY="328.0" prefHeight="124.0" prefWidth="257.0" />
-      <Label fx:id="label_descripcion" layoutX="35.0" layoutY="303.0" prefHeight="0.0" prefWidth="65.0" text="Descripción:" />
-      <Label layoutX="442.0" layoutY="307.0" text="Evoluciones:" />
-      <Label layoutX="668.0" layoutY="38.0" text="Similares:" />
+      <TextArea fx:id="text_area_descripcion" layoutX="35.0" layoutY="328.0" prefHeight="124.0" prefWidth="257.0" visible="false" />
+      <Label fx:id="label_descripcion" layoutX="35.0" layoutY="303.0" prefHeight="0.0" prefWidth="65.0" text="Descripción:" visible="false" />
+      <Label layoutX="442.0" layoutY="307.0" text="Evoluciones:" visible="false" />
+      <Label layoutX="668.0" layoutY="38.0" text="Similares:" visible="false" />
+
+      <Label fx:id="label_name_send" layoutX="298.0" layoutY="63.0" text="Nombre:" />
+      <Label fx:id="label_image_send" layoutX="299.0" layoutY="95.0" text="Imagen:" />
+      <Label fx:id="label_weight_send" layoutX="299.0" layoutY="131.0" text="Peso:" />
+      <Label fx:id="label_height_send" layoutX="299.0" layoutY="167.0" text="Altura" />
+      <Label fx:id="lebel_category_send" layoutX="288.0" layoutY="198.0" text="Categoria:" />
+      <Label layoutX="88.0" layoutY="183.0" />
+      <Label fx:id="label_evo1_send" layoutX="278.0" layoutY="264.0" text="Evolucion 1:" />
+      <Label fx:id="label_evo2_send" layoutX="278.0" layoutY="295.0" text="Evolucion 2:" />
+      <Label fx:id="label_pokeball_send" layoutX="251.0" layoutY="328.0" text="Tipo de pokebola:" />
+      <Label fx:id="label_description_send" layoutX="278.0" layoutY="360.0" text="Descripcion:" />
+      <TextField fx:id="text_name_send" layoutX="345.0" layoutY="59.0" />
+      <TextField fx:id="text_image_send" layoutX="345.0" layoutY="91.0" />
+      <TextField fx:id="text_weight_send" layoutX="345.0" layoutY="127.0" />
+      <TextField fx:id="text_height_send" layoutX="345.0" layoutY="163.0" />
+      <TextField fx:id="text_category_send" layoutX="345.0" layoutY="194.0" />
+      <TextField fx:id="text_element_send" layoutX="345.0" layoutY="228.0" />
+      <TextField fx:id="text_evo1_send" layoutX="345.0" layoutY="260.0" />
+      <TextField fx:id="text_evo2_send" layoutX="345.0" layoutY="291.0" />
+      <TextField fx:id="text_pokeball_send" layoutX="345.0" layoutY="324.0" />
+      <TextField fx:id="text_description_send" layoutX="345.0" layoutY="356.0" />
+      <Label fx:id="label_element_send" layoutX="289.0" layoutY="232.0" text="Elemento:" />
+      <Button fx:id="button_submit" layoutX="394.0" layoutY="395.0" mnemonicParsing="false" text="Enviar" />
+
    </children>
 </AnchorPane>

@@ -118,6 +118,53 @@ public class HelloController {
     @FXML
     private ImageView img_evolucion2;
 
+    //view submit ----------------------------------------------------------
+    @FXML
+    private Button button_submit;
+    @FXML
+    private Label label_description_send;
+    @FXML
+    private Label label_element_send;
+    @FXML
+    private Label label_evo1_send;
+
+    @FXML
+    private Label label_evo2_send;
+
+    @FXML
+    private Label label_height_send;
+    @FXML
+    private Label label_image_send;
+    @FXML
+    private Label label_name_send;
+    @FXML
+    private Label label_pokeball_send;
+    @FXML
+    private Label label_weight_send;
+    @FXML
+    private Label lebel_category_send;
+    @FXML
+    private TextField text_category_send;
+    @FXML
+    private TextField text_description_send;
+    @FXML
+    private TextField text_element_send;
+    @FXML
+    private TextField text_evo1_send;
+    @FXML
+    private TextField text_evo2_send;
+    @FXML
+    private TextField text_height_send;
+    @FXML
+    private TextField text_image_send;
+    @FXML
+    private TextField text_name_send;
+    @FXML
+    private TextField text_pokeball_send;
+    @FXML
+    private TextField text_weight_send;
+
+    //----------------------------------------end view submit--------------------
 
 
     //objects Image for the ImageView´s
@@ -139,7 +186,8 @@ public class HelloController {
         view_two = false;
         view_three = true;
 
-        //We make the buttons of view_1 invisible
+        //---------------------------buttons visible of view one----------------------------
+        //We make the buttons of view_2 invisible
         button_1.setVisible(false);
         button_2.setVisible(false);
         button_3.setVisible(false);
@@ -159,6 +207,7 @@ public class HelloController {
         imagen_7.setVisible(false);
         imagen_8.setVisible(false);
 
+        //---------------------elements of view3 visible------------------------
         //We make the labels of view_2 visible
         label_name.setVisible(true);
         label_wigth.setVisible(true);
@@ -167,7 +216,7 @@ public class HelloController {
         label_element.setVisible(true);
         label_pokeball.setVisible(true);
 
-        //We make the TextFields of view_2 visible
+        //We make the TextFields of view_3 visible
         text_name.setVisible(true);
         text_weigth.setVisible(true);
         text_heigth.setVisible(true);
@@ -188,7 +237,7 @@ public class HelloController {
         img_evolucion2.setVisible(true);
         label_descripcion.setVisible(true);
 
-        //Set the values fot the view two
+        //Set the values fot the view two..........................
         pokemon_image.setImage(imagen1);
         similar_pokemon1.setImage(imagen1);
         similar_pokemon2.setImage(imagen1);
@@ -301,6 +350,11 @@ public class HelloController {
     @FXML
     void showPokemon(ActionEvent event) {
         imagen_1.setImage(imagen1);
+    }
+
+    @FXML
+    void goToViewSubmit(ActionEvent event){
+
     }
 
 }
