@@ -491,7 +491,7 @@ public class HelloController {
         Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(0)))));
         img_evolucion1.setImage(imagenEvo1);
         Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(0)))));
-        img_evolucion1.setImage(imagenEvo2);
+        img_evolucion2.setImage(imagenEvo2);
         text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(0)));
         text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(0)));
     }
@@ -508,7 +508,7 @@ public class HelloController {
         Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(1)))));
         img_evolucion1.setImage(imagenEvo1);
         Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(1)))));
-        img_evolucion1.setImage(imagenEvo2);
+        img_evolucion2.setImage(imagenEvo2);
         text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(1)));
         text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(1)));
     }
