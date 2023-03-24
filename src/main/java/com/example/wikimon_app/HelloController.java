@@ -118,7 +118,7 @@ public class HelloController {
     @FXML
     private ImageView img_evolucion2;
 
-    //view submit ----------------------------------------------------------
+    //------------------------view submit ----------------------------------------------------------
     @FXML
     private Button button_submit;
     @FXML
@@ -127,10 +127,8 @@ public class HelloController {
     private Label label_element_send;
     @FXML
     private Label label_evo1_send;
-
     @FXML
     private Label label_evo2_send;
-
     @FXML
     private Label label_height_send;
     @FXML
@@ -142,11 +140,9 @@ public class HelloController {
     @FXML
     private Label label_weight_send;
     @FXML
-    private Label lebel_category_send;
+    private Label label_category_send;
     @FXML
     private TextField text_category_send;
-    @FXML
-    private TextField text_description_send;
     @FXML
     private TextField text_element_send;
     @FXML
@@ -163,6 +159,10 @@ public class HelloController {
     private TextField text_pokeball_send;
     @FXML
     private TextField text_weight_send;
+    @FXML
+    private TextArea text_area_description_send;
+    @FXML
+    private Button button_add_pokemon;
 
     //----------------------------------------end view submit--------------------
 
@@ -207,6 +207,7 @@ public class HelloController {
         imagen_7.setVisible(false);
         imagen_8.setVisible(false);
 
+
         //---------------------elements of view3 visible------------------------
         //We make the labels of view_2 visible
         label_name.setVisible(true);
@@ -247,12 +248,13 @@ public class HelloController {
         img_evolucion2.setImage(imagen1);
 
         //Button of back to the view one
-        if (view_three == true){
+        if (view_three == true) {
             buttonBack.setVisible(true);
         }
     }
 
     boolean ejecucionRead = false;
+
     @FXML
     void goToViewTwo(ActionEvent event) {
 
@@ -266,7 +268,7 @@ public class HelloController {
 
         //we call to the method that will pull the information from the BBDD
         //conditional to check if the method is already called
-        if (ejecucionRead == false){
+        if (ejecucionRead == false) {
             PokemonsDAO.readRegisters();
         }
 
@@ -338,10 +340,32 @@ public class HelloController {
         img_evolucion1.setVisible(false);
         img_evolucion2.setVisible(false);
 
-        //--------
-        if (view_three == true){
+        //we make invisible the view submit
+        button_submit.setVisible(false);
+        label_description_send.setVisible(false);
+        label_element_send.setVisible(false);
+        label_evo1_send.setVisible(false);
+        label_evo2_send.setVisible(false);
+        label_height_send.setVisible(false);
+        label_image_send.setVisible(false);
+        label_name_send.setVisible(false);
+        label_pokeball_send.setVisible(false);
+        label_weight_send.setVisible(false);
+        label_category_send.setVisible(false);
+        text_category_send.setVisible(false);
+        text_area_description_send.setVisible(false);
+        text_element_send.setVisible(false);
+        text_evo1_send.setVisible(false);
+        text_evo2_send.setVisible(false);
+        text_height_send.setVisible(false);
+        text_image_send.setVisible(false);
+        text_name_send.setVisible(false);
+        text_pokeball_send.setVisible(false);
+        text_weight_send.setVisible(false);
 
-        }
+        //--------
+        //Button to go to the view submit
+        button_add_pokemon.setVisible(true);
 
         ejecucionRead = true;
     }
@@ -353,7 +377,60 @@ public class HelloController {
     }
 
     @FXML
-    void goToViewSubmit(ActionEvent event){
+    void goToViewSubmit(ActionEvent event) {
+
+        //we make visible the elements of view submit
+        button_submit.setVisible(true);
+        label_description_send.setVisible(true);
+        label_element_send.setVisible(true);
+        label_evo1_send.setVisible(true);
+        label_evo2_send.setVisible(true);
+        label_height_send.setVisible(true);
+        label_image_send.setVisible(true);
+        label_name_send.setVisible(true);
+        label_pokeball_send.setVisible(true);
+        label_weight_send.setVisible(true);
+        label_category_send.setVisible(true);
+        text_category_send.setVisible(true);
+        text_area_description_send.setVisible(true);
+        text_element_send.setVisible(true);
+        text_evo1_send.setVisible(true);
+        text_evo2_send.setVisible(true);
+        text_height_send.setVisible(true);
+        text_image_send.setVisible(true);
+        text_name_send.setVisible(true);
+        text_pokeball_send.setVisible(true);
+        text_weight_send.setVisible(true);
+
+        search_button.setVisible(true);
+        searchText.setVisible(true);
+
+        buttonBack.setVisible(true);
+
+        //---------------------------view two invisible--------------------------
+        //We make the buttons of the view1 visible again
+        button_1.setVisible(false);
+        button_2.setVisible(false);
+        button_3.setVisible(false);
+        button_4.setVisible(false);
+        button_5.setVisible(false);
+        button_6.setVisible(false);
+        button_7.setVisible(false);
+        button_8.setVisible(false);
+
+        //We make the images of the view1 visible again
+        imagen_1.setVisible(false);
+        imagen_2.setVisible(false);
+        imagen_3.setVisible(false);
+        imagen_4.setVisible(false);
+        imagen_5.setVisible(false);
+        imagen_6.setVisible(false);
+        imagen_7.setVisible(false);
+        imagen_8.setVisible(false);
+
+    }
+
+    public static void submit(ActionEvent event){
 
     }
 

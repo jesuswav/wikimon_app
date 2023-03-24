@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class PokemonsDAO {
 
+    static ConectionBBDD db_connection = new ConectionBBDD();
+
     //Arrays to save the information of the pokemons
     static ArrayList<Integer> ids = new ArrayList<Integer>();
     static ArrayList<String> names = new ArrayList<String>();
@@ -22,7 +24,7 @@ public class PokemonsDAO {
     static ArrayList<String> descriptions = new ArrayList<String>();
 
     public static void readRegisters(){
-        ConectionBBDD db_connection = new ConectionBBDD();
+
 
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -60,6 +62,32 @@ public class PokemonsDAO {
             }
         }catch (SQLException e){
             System.out.println("No se recupuperaron los datos");
+            System.out.println(e);
+        }
+    }
+
+    public static void createPokemon(){
+        try (Connection conexion = db_connection.getConnection()){
+            PreparedStatement ps = null;
+            try {
+                String query = "INSERT INTO pokemones (`name`, `image`, `weight`, `heigth`, `category`, `element`, `evolution_1`, `evolution_2`, `pokeball_type`, `description`) VALUES (?,?,?,?,?,?,?,?,?,?)";
+                ps = conexion.prepareStatement(query);
+                ps.setString(1, HelloController.text_name_send.getText());
+                ps.setString(2, HelloController.text_image_send.getText());
+                ps.setString(3, HelloController.text_weight_send.getText());
+                ps.setString(4, HelloController.text_height_send.getText());
+                ps.setString(5, HelloController.text_category_send.getText());
+                ps.setString(6, HelloController.text_element_send.getText());
+                ps.setString(7, HelloController.text_evo1_send.getText());
+                ps.setString(8, HelloController.text_evo2_send.getText());
+                ps.setString(9, HelloController.text_pokeball_send.getText());
+                ps.setString(10, HelloController.text_area_description_send.getText());
+                ps.executeUpdate();
+                System.out.println("Successful register");
+            }catch (SQLException ex){
+                System.out.println(ex);
+            }
+        }catch (SQLException e){
             System.out.println(e);
         }
     }
