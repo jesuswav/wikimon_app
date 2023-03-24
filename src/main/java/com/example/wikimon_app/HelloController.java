@@ -179,6 +179,8 @@ public class HelloController {
     @FXML
     private Label label_tittle;
 
+    //------------------Methods--------------------------------
+
     //Function to go to the next view using setVisible -------
     @FXML
     void goToViewTree(ActionEvent event) {
@@ -274,9 +276,9 @@ public class HelloController {
 
         System.out.println("Ids");
         System.out.println(PokemonsDAO.ids);
-        Image imagenSquirtle = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(0))));
+        Image imagenView = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(0))));
 
-        imagen_1.setImage(imagenSquirtle);
+        imagen_1.setImage(imagenView);
 
         view_one = false;
         view_two = true;
@@ -445,6 +447,18 @@ public class HelloController {
         PokemonsDAO.createPokemon(pokemon.getName(), pokemon.getImage(), pokemon.weigth,
                 pokemon.getHeigth(), pokemon.getCategory(), pokemon.getElement(), pokemon.getEvolution_one(),
                 pokemon.getGetEvolution_two(), pokemon.getPokeball_type(), pokemon.getDescription());
+
+        //delete the data of the TextFields when the information is already send to the BBDD
+        text_name_send.setText("");
+        text_image_send.setText("");
+        text_weight_send.setText("");
+        text_height_send.setText("");
+        text_category_send.setText("");
+        text_element_send.setText("");
+        text_evo1_send.setText("");
+        text_evo2_send.setText("");
+        text_pokeball_send.setText("");
+        text_area_description_send.setText("");
     }
 
 }
