@@ -8,9 +8,17 @@ import javafx.scene.image.ImageView;
 
 import java.io.File;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class HelloController {
+
+    ArrayList<Integer> randomIndex = new ArrayList<>();
+
+    //declaration of the objects to show the images
+
+    //Evolutions images for the detailed view
 
     //Global variables
     public boolean view_one;
@@ -169,8 +177,8 @@ public class HelloController {
 
     //objects Image for the ImageView´s
     //Image imagen1 = new Image(getClass().getResourceAsStream("/src/main/resources/Chikorita_E1.jpg"));
-    Image imagen1 = new Image(String.valueOf(new File("C:\\Users\\walte\\IdeaProjects\\wikimon_app\\src\\main\\java\\com\\example\\wikimon_app\\Pokemones\\Chikorita_E1.jpg")));
 
+    //##########################################################################
     //Button of the first view in the program
     @FXML
     private Button button_tittle;
@@ -183,7 +191,7 @@ public class HelloController {
 
     //Function to go to the next view using setVisible -------
     @FXML
-    void goToViewTree(ActionEvent event) {
+    void goToViewTree() {
         view_one = false;
         view_two = false;
         view_three = true;
@@ -241,13 +249,13 @@ public class HelloController {
         label_descripcion.setVisible(true);
 
         //Set the values fot the view two..........................
-        pokemon_image.setImage(imagen1);
+        /*pokemon_image.setImage(imagen1);
         similar_pokemon1.setImage(imagen1);
         similar_pokemon2.setImage(imagen1);
         similar_pokemon3.setImage(imagen1);
 
         img_evolucion1.setImage(imagen1);
-        img_evolucion2.setImage(imagen1);
+        img_evolucion2.setImage(imagen1);*/
 
         //Button of back to the view one
         if (view_three == true) {
@@ -272,13 +280,48 @@ public class HelloController {
         //conditional to check if the method is already called
         if (ejecucionRead == false) {
             PokemonsDAO.readRegisters();
+
+            for (int i = 0; i <=(PokemonsDAO.image_routes.size()-1); i++) {
+                randomIndex.add(i);
+            }
         }
+
+        //pokemons that will be in the ImageViews
+
+
+        Collections.shuffle(randomIndex);
+        System.out.println("Lista desordenada");
+        System.out.println(randomIndex);
 
         System.out.println("Ids");
         System.out.println(PokemonsDAO.ids);
-        Image imagenView = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(0))));
 
-        imagen_1.setImage(imagenView);
+        //setting the images to the ImagesViews
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(0)))));
+        imagen_1.setImage(imagen1);
+
+        Image imagen2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(1)))));
+        imagen_2.setImage(imagen2);
+
+        /*Image imagen3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
+        imagen_3.setImage(imagen3);
+
+        Image imagen4 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(3)))));
+        imagen_4.setImage(imagen4);
+
+        Image imagen5 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(4)))));
+        imagen_5.setImage(imagen5);
+
+        Image imagen6 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
+        imagen_6.setImage(imagen6);
+
+        Image imagen7 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(6)))));
+        imagen_7.setImage(imagen7);
+
+        Image imagen8 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
+        imagen_8.setImage(imagen8);*/
+
+        //-----------------------------------------------------------
 
         view_one = false;
         view_two = true;
@@ -377,7 +420,7 @@ public class HelloController {
 
     @FXML
     void showPokemon(ActionEvent event) {
-        imagen_1.setImage(imagen1);
+        //imagen_1.setImage(imagen1);
     }
 
     @FXML
@@ -432,6 +475,66 @@ public class HelloController {
         imagen_7.setVisible(false);
         imagen_8.setVisible(false);
 
+    }
+
+    //Methods to buttons Detalles ------------------------------
+    @FXML
+    void detalles1(ActionEvent event){
+        goToViewTree();
+        text_name.setText(PokemonsDAO.names.get(randomIndex.get(0)));
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(0)))));
+        pokemon_image.setImage(imagen1);
+        text_weigth.setText(PokemonsDAO.weights.get(randomIndex.get(0)));
+        text_heigth.setText(PokemonsDAO.heights.get(randomIndex.get(0)));
+        text_category.setText(PokemonsDAO.categories.get(randomIndex.get(0)));
+        text_element.setText(PokemonsDAO.elements.get(randomIndex.get(0)));
+        Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(0)))));
+        img_evolucion1.setImage(imagenEvo1);
+        Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(0)))));
+        img_evolucion1.setImage(imagenEvo2);
+        text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(0)));
+        text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(0)));
+    }
+    @FXML
+    void detalles2(ActionEvent event){
+        goToViewTree();
+        text_name.setText(PokemonsDAO.names.get(randomIndex.get(1)));
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(1)))));
+        pokemon_image.setImage(imagen1);
+        text_weigth.setText(PokemonsDAO.weights.get(randomIndex.get(1)));
+        text_heigth.setText(PokemonsDAO.heights.get(randomIndex.get(1)));
+        text_category.setText(PokemonsDAO.categories.get(randomIndex.get(1)));
+        text_element.setText(PokemonsDAO.elements.get(randomIndex.get(1)));
+        Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(1)))));
+        img_evolucion1.setImage(imagenEvo1);
+        Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(1)))));
+        img_evolucion1.setImage(imagenEvo2);
+        text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(1)));
+        text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(1)));
+    }
+    @FXML
+    void detalles3(ActionEvent event){
+        goToViewTree();
+    }
+    @FXML
+    void detalles4(ActionEvent event){
+        goToViewTree();
+    }
+    @FXML
+    void detalles5(ActionEvent event){
+        goToViewTree();
+    }
+    @FXML
+    void detalles6(ActionEvent event){
+        goToViewTree();
+    }
+    @FXML
+    void detalles7(ActionEvent event){
+        goToViewTree();
+    }
+    @FXML
+    void detalles8(ActionEvent event){
+        goToViewTree();
     }
 
     public void buttonSubmit(ActionEvent event){

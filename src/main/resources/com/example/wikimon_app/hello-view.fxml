@@ -51,14 +51,14 @@
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <Button fx:id="button_1" layoutX="24.0" layoutY="202.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_5" layoutX="24.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_2" layoutX="218.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_6" layoutX="220.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_3" layoutX="409.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_7" layoutX="410.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_4" layoutX="602.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_8" layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#goToViewTree" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_1" layoutX="24.0" layoutY="202.0" mnemonicParsing="false" onAction="#detalles1" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_5" layoutX="24.0" layoutY="389.0" mnemonicParsing="false" onAction="#detalles5" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_2" layoutX="218.0" layoutY="200.0" mnemonicParsing="false" onAction="#detalles2" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_6" layoutX="220.0" layoutY="389.0" mnemonicParsing="false" onAction="#detalles6" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_3" layoutX="409.0" layoutY="200.0" mnemonicParsing="false" onAction="#detalles3" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_7" layoutX="410.0" layoutY="389.0" mnemonicParsing="false" onAction="#detalles7" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_4" layoutX="602.0" layoutY="200.0" mnemonicParsing="false" onAction="#detalles4" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
+      <Button fx:id="button_8" layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#detalles8" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
       <TextField fx:id="searchText" layoutX="559.0" layoutY="4.0" visible="false" />
       <Button fx:id="search_button" layoutX="716.0" layoutY="4.0" mnemonicParsing="false" onAction="#showPokemon" prefHeight="25.0" prefWidth="59.0" text="Buscar" visible="false" />
       <ImageView fx:id="pokemon_image" fitHeight="257.0" fitWidth="280.0" layoutX="33.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" visible="false">

@@ -1,5 +1,7 @@
 package com.example.wikimon_app;
 
+import java.util.ArrayList;
+
 public class Pokemones {
 
     String name;
@@ -26,6 +28,7 @@ public class Pokemones {
         this.pokeball_type = pokeball_type;
         this.description = description;
     }
+
 
     public String getName() {
         return name;
