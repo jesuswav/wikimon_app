@@ -119,8 +119,7 @@
       <Label fx:id="label_image_send" layoutX="299.0" layoutY="95.0" text="Imagen:" visible="false" />
       <Label fx:id="label_weight_send" layoutX="313.0" layoutY="131.0" text="Peso:" visible="false" />
       <Label fx:id="label_height_send" layoutX="304.0" layoutY="167.0" text="Altura:" visible="false" />
-      <Label fx:id="lebel_category_send" layoutX="288.0" layoutY="198.0" text="Categoria:" visible="false" />
-      <Label layoutX="88.0" layoutY="183.0" visible="false" />
+      <Label fx:id="label_category_send" layoutX="288.0" layoutY="198.0" text="Categoria:" visible="false" />
       <Label fx:id="label_evo1_send" layoutX="278.0" layoutY="264.0" text="Evolucion 1:" visible="false" />
       <Label fx:id="label_evo2_send" layoutX="278.0" layoutY="295.0" text="Evolucion 2:" visible="false" />
       <Label fx:id="label_pokeball_send" layoutX="245.0" layoutY="328.0" text="Tipo de pokebola:" visible="false" />
@@ -135,8 +134,8 @@
       <TextField fx:id="text_evo2_send" layoutX="345.0" layoutY="291.0" visible="false" />
       <TextField fx:id="text_pokeball_send" layoutX="345.0" layoutY="324.0" visible="false" />
       <Label fx:id="label_element_send" layoutX="289.0" layoutY="232.0" text="Elemento:" visible="false" />
-      <Button fx:id="button_submit" layoutX="514.0" layoutY="316.0" mnemonicParsing="false" text="Enviar" visible="false" />
-      <Button layoutX="439.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewSubmit" text="Agregar pokemon" visible="false" />
+      <Button fx:id="button_submit" layoutX="514.0" layoutY="316.0" mnemonicParsing="false" onAction="#buttonSubmit" text="Enviar" visible="false" />
+      <Button fx:id="button_add_pokemon" layoutX="439.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewSubmit" text="Agregar pokemon" visible="false" />
       <TextArea fx:id="text_area_description_send" layoutX="345.0" layoutY="361.0" prefHeight="80.0" prefWidth="207.0" visible="false" />
 
    </children>

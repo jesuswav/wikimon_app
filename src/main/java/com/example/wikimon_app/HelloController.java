@@ -302,6 +302,8 @@ public class HelloController {
         imagen_7.setVisible(true);
         imagen_8.setVisible(true);
 
+        button_add_pokemon.setVisible(true);
+
         //we make insisible the labels of view2 again
         label_name.setVisible(false);
         label_wigth.setVisible(false);
@@ -430,8 +432,19 @@ public class HelloController {
 
     }
 
-    public static void submit(ActionEvent event){
+    public void buttonSubmit(ActionEvent event){
+        //we set the data of the objects in the viewSubmit in the variables of the
+        //class Pokemones, to give this data to the method createPokemon
+        Pokemones pokemon = new Pokemones(text_name_send.getText(), text_image_send.getText(),
+                text_weight_send.getText(), text_height_send.getText(), text_category_send.getText(),
+                label_element_send.getText(), text_evo1_send.getText(), text_evo2_send.getText(),
+                text_pokeball_send.getText(), text_area_description_send.getText());
 
+        //we call to the function that send the data to the BBDD and we give it as parameters the
+        //data to insert into the BBDD
+        PokemonsDAO.createPokemon(pokemon.getName(), pokemon.getImage(), pokemon.weigth,
+                pokemon.getHeigth(), pokemon.getCategory(), pokemon.getElement(), pokemon.getEvolution_one(),
+                pokemon.getGetEvolution_two(), pokemon.getPokeball_type(), pokemon.getDescription());
     }
 
 }
