@@ -417,6 +417,10 @@ public class HelloController {
         ejecucionRead = true;
     }
 
+    @FXML
+    void goToViewBattle(ActionEvent event){
+
+    }
 
     @FXML
     void showPokemon(ActionEvent event) {
