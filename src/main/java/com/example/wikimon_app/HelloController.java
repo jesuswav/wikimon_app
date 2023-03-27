@@ -697,5 +697,4 @@ public class HelloController {
         text_pokeball_send.setText("");
         text_area_description_send.setText("");
     }
-
 }
