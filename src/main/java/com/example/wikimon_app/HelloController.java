@@ -54,6 +54,9 @@ public class HelloController {
     @FXML
     private Button buttonBack;
 
+    @FXML
+    private Button buttonBattle;
+
     //Imagenes de la vista_1 ---------------------
     @FXML
     private ImageView imagen_1;
@@ -248,14 +251,7 @@ public class HelloController {
         img_evolucion2.setVisible(true);
         label_descripcion.setVisible(true);
 
-        //Set the values fot the view two..........................
-        /*pokemon_image.setImage(imagen1);
-        similar_pokemon1.setImage(imagen1);
-        similar_pokemon2.setImage(imagen1);
-        similar_pokemon3.setImage(imagen1);
-
-        img_evolucion1.setImage(imagen1);
-        img_evolucion2.setImage(imagen1);*/
+        buttonBattle.setVisible(false);
 
         //Button of back to the view one
         if (view_three == true) {
@@ -413,13 +409,43 @@ public class HelloController {
         //--------
         //Button to go to the view submit
         button_add_pokemon.setVisible(true);
+        buttonBattle.setVisible(true);
 
+        buttonBack.setVisible(false);
         ejecucionRead = true;
     }
 
     @FXML
     void goToViewBattle(ActionEvent event){
+        //We make the buttons of the view1 visible again
+        button_1.setVisible(false);
+        button_2.setVisible(false);
+        button_3.setVisible(false);
+        button_4.setVisible(false);
+        button_5.setVisible(false);
+        button_6.setVisible(false);
+        button_7.setVisible(false);
+        button_8.setVisible(false);
 
+        //We make the images of the view1 visible again
+        imagen_1.setVisible(false);
+        imagen_2.setVisible(false);
+        imagen_3.setVisible(false);
+        imagen_4.setVisible(false);
+        imagen_5.setVisible(false);
+        imagen_6.setVisible(false);
+        imagen_7.setVisible(false);
+        imagen_8.setVisible(false);
+
+        button_add_pokemon.setVisible(false);
+
+        button_add_pokemon.setVisible(false);
+        buttonBattle.setVisible(false);
+        search_button.setVisible(false);
+        searchText.setVisible(false);
+
+        label_tittle.setVisible(true);
+        button_tittle.setVisible(true);
     }
 
     @FXML
@@ -506,6 +532,7 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
+
     @FXML
     void detalles2(ActionEvent event){
         goToViewTree();

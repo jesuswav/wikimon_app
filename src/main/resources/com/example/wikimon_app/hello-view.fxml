@@ -137,6 +137,7 @@
       <Button fx:id="button_submit" layoutX="514.0" layoutY="316.0" mnemonicParsing="false" onAction="#buttonSubmit" text="Enviar" visible="false" />
       <Button fx:id="button_add_pokemon" layoutX="439.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewSubmit" text="Agregar pokemon" visible="false" />
       <TextArea fx:id="text_area_description_send" layoutX="345.0" layoutY="361.0" prefHeight="80.0" prefWidth="207.0" visible="false" />
+      <Button fx:id="buttonBattle" layoutX="24.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewBattle" text="Go to battle!" visible="false" />
 
    </children>
 </AnchorPane>
