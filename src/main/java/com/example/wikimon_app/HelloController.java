@@ -303,7 +303,7 @@ public class HelloController {
         Image imagen2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(1)))));
         imagen_2.setImage(imagen2);
 
-        /*Image imagen3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
+        Image imagen3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
         imagen_3.setImage(imagen3);
 
         Image imagen4 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(3)))));
@@ -319,7 +319,7 @@ public class HelloController {
         imagen_7.setImage(imagen7);
 
         Image imagen8 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
-        imagen_8.setImage(imagen8);*/
+        imagen_8.setImage(imagen8);
 
         //-----------------------------------------------------------
 
@@ -494,6 +494,13 @@ public class HelloController {
         img_evolucion2.setImage(imagenEvo2);
         text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(0)));
         text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(0)));
+
+        Image pokemonSimilar1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(4)))));
+        similar_pokemon1.setImage(pokemonSimilar1);
+        Image pokemonSimilar2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(1)))));
+        similar_pokemon2.setImage(pokemonSimilar2);
+        Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
+        similar_pokemon3.setImage(pokemonSimilar3);
     }
     @FXML
     void detalles2(ActionEvent event){
@@ -511,30 +518,157 @@ public class HelloController {
         img_evolucion2.setImage(imagenEvo2);
         text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(1)));
         text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(1)));
+
+        Image pokemonSimilar1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
+        similar_pokemon1.setImage(pokemonSimilar1);
+        Image pokemonSimilar2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
+        similar_pokemon2.setImage(pokemonSimilar2);
+        Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(3)))));
+        similar_pokemon3.setImage(pokemonSimilar3);
     }
     @FXML
     void detalles3(ActionEvent event){
         goToViewTree();
+        text_name.setText(PokemonsDAO.names.get(randomIndex.get(2)));
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
+        pokemon_image.setImage(imagen1);
+        text_weigth.setText(PokemonsDAO.weights.get(randomIndex.get(2)));
+        text_heigth.setText(PokemonsDAO.heights.get(randomIndex.get(2)));
+        text_category.setText(PokemonsDAO.categories.get(randomIndex.get(2)));
+        text_element.setText(PokemonsDAO.elements.get(randomIndex.get(2)));
+        Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(2)))));
+        img_evolucion1.setImage(imagenEvo1);
+        Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(2)))));
+        img_evolucion2.setImage(imagenEvo2);
+        text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(2)));
+        text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(2)));
+
+        Image pokemonSimilar1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
+        similar_pokemon1.setImage(pokemonSimilar1);
+        Image pokemonSimilar2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(4)))));
+        similar_pokemon2.setImage(pokemonSimilar2);
+        Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(6)))));
+        similar_pokemon3.setImage(pokemonSimilar3);
     }
     @FXML
     void detalles4(ActionEvent event){
         goToViewTree();
+        text_name.setText(PokemonsDAO.names.get(randomIndex.get(3)));
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(3)))));
+        pokemon_image.setImage(imagen1);
+        text_weigth.setText(PokemonsDAO.weights.get(randomIndex.get(3)));
+        text_heigth.setText(PokemonsDAO.heights.get(randomIndex.get(3)));
+        text_category.setText(PokemonsDAO.categories.get(randomIndex.get(3)));
+        text_element.setText(PokemonsDAO.elements.get(randomIndex.get(3)));
+        Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(3)))));
+        img_evolucion1.setImage(imagenEvo1);
+        Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(3)))));
+        img_evolucion2.setImage(imagenEvo2);
+        text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(3)));
+        text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(3)));
+
+        Image pokemonSimilar1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
+        similar_pokemon1.setImage(pokemonSimilar1);
+        Image pokemonSimilar2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
+        similar_pokemon2.setImage(pokemonSimilar2);
+        Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
+        similar_pokemon3.setImage(pokemonSimilar3);
     }
     @FXML
     void detalles5(ActionEvent event){
         goToViewTree();
+        text_name.setText(PokemonsDAO.names.get(randomIndex.get(4)));
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(4)))));
+        pokemon_image.setImage(imagen1);
+        text_weigth.setText(PokemonsDAO.weights.get(randomIndex.get(4)));
+        text_heigth.setText(PokemonsDAO.heights.get(randomIndex.get(4)));
+        text_category.setText(PokemonsDAO.categories.get(randomIndex.get(2)));
+        text_element.setText(PokemonsDAO.elements.get(randomIndex.get(4)));
+        Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(4)))));
+        img_evolucion1.setImage(imagenEvo1);
+        Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(4)))));
+        img_evolucion2.setImage(imagenEvo2);
+        text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(4)));
+        text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(4)));
+
+        Image pokemonSimilar1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(3)))));
+        similar_pokemon1.setImage(pokemonSimilar1);
+        Image pokemonSimilar2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
+        similar_pokemon2.setImage(pokemonSimilar2);
+        Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
+        similar_pokemon3.setImage(pokemonSimilar3);
     }
     @FXML
     void detalles6(ActionEvent event){
         goToViewTree();
+        text_name.setText(PokemonsDAO.names.get(randomIndex.get(5)));
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
+        pokemon_image.setImage(imagen1);
+        text_weigth.setText(PokemonsDAO.weights.get(randomIndex.get(5)));
+        text_heigth.setText(PokemonsDAO.heights.get(randomIndex.get(5)));
+        text_category.setText(PokemonsDAO.categories.get(randomIndex.get(5)));
+        text_element.setText(PokemonsDAO.elements.get(randomIndex.get(5)));
+        Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(5)))));
+        img_evolucion1.setImage(imagenEvo1);
+        Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(5)))));
+        img_evolucion2.setImage(imagenEvo2);
+        text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(5)));
+        text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(5)));
+
+        Image pokemonSimilar1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(6)))));
+        similar_pokemon1.setImage(pokemonSimilar1);
+        Image pokemonSimilar2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(4)))));
+        similar_pokemon2.setImage(pokemonSimilar2);
+        Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
+        similar_pokemon3.setImage(pokemonSimilar3);
     }
     @FXML
     void detalles7(ActionEvent event){
         goToViewTree();
+        text_name.setText(PokemonsDAO.names.get(randomIndex.get(6)));
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(6)))));
+        pokemon_image.setImage(imagen1);
+        text_weigth.setText(PokemonsDAO.weights.get(randomIndex.get(6)));
+        text_heigth.setText(PokemonsDAO.heights.get(randomIndex.get(6)));
+        text_category.setText(PokemonsDAO.categories.get(randomIndex.get(6)));
+        text_element.setText(PokemonsDAO.elements.get(randomIndex.get(6)));
+        Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(6)))));
+        img_evolucion1.setImage(imagenEvo1);
+        Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(6)))));
+        img_evolucion2.setImage(imagenEvo2);
+        text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(6)));
+        text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(6)));
+
+        Image pokemonSimilar1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(3)))));
+        similar_pokemon1.setImage(pokemonSimilar1);
+        Image pokemonSimilar2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
+        similar_pokemon2.setImage(pokemonSimilar2);
+        Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
+        similar_pokemon3.setImage(pokemonSimilar3);
     }
     @FXML
     void detalles8(ActionEvent event){
         goToViewTree();
+        text_name.setText(PokemonsDAO.names.get(randomIndex.get(7)));
+        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
+        pokemon_image.setImage(imagen1);
+        text_weigth.setText(PokemonsDAO.weights.get(randomIndex.get(7)));
+        text_heigth.setText(PokemonsDAO.heights.get(randomIndex.get(7)));
+        text_category.setText(PokemonsDAO.categories.get(randomIndex.get(7)));
+        text_element.setText(PokemonsDAO.elements.get(randomIndex.get(7)));
+        Image imagenEvo1 = new Image(String.valueOf(new File(PokemonsDAO.evolution_1_routes.get(randomIndex.get(7)))));
+        img_evolucion1.setImage(imagenEvo1);
+        Image imagenEvo2 = new Image(String.valueOf(new File(PokemonsDAO.evolution_2_routes.get(randomIndex.get(7)))));
+        img_evolucion2.setImage(imagenEvo2);
+        text_pokeball.setText(PokemonsDAO.pokeball_types.get(randomIndex.get(7)));
+        text_area_descripcion.setText(PokemonsDAO.descriptions.get(randomIndex.get(7)));
+
+        Image pokemonSimilar1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
+        similar_pokemon1.setImage(pokemonSimilar1);
+        Image pokemonSimilar2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
+        similar_pokemon2.setImage(pokemonSimilar2);
+        Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(6)))));
+        similar_pokemon3.setImage(pokemonSimilar3);
     }
 
     public void buttonSubmit(ActionEvent event){
