@@ -475,7 +475,7 @@ public class HelloController {
         water_button.setVisible(true);
         ray_button.setVisible(true);
 
-        int randomNumberToIndex = randomNumber(randomIndex.size());
+        int randomNumberToIndex = randomNumber(randomIndex.size()-1);
 
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(randomNumberToIndex)))));
         imagen_1.setImage(imagen1);
@@ -485,8 +485,9 @@ public class HelloController {
 
         image_player.setImage(imagen1);
         image_enemy.setImage(imagen2);
-
     }
+
+
 
     @FXML
     void showPokemon(ActionEvent event) {
