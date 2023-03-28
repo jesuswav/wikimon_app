@@ -262,6 +262,9 @@ public class HelloController {
     @FXML
     void goToViewTwo(ActionEvent event) {
 
+        if (randomIndex.size() <= 0) {
+            pokemonImages();
+        }
         //setting the images to the ImagesViews
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(0)))));
         imagen_1.setImage(imagen1);
@@ -493,24 +496,22 @@ public class HelloController {
         System.out.println(PokemonsDAO.ids);
     }
 
-    public void imagesForBattles(){
+    public void imagesForBattles() {
 
-        if (randomIndex.size() <= 0){
+        if (randomIndex.size() <= 0) {
             pokemonImages();
         }
 
-        int randomNumberToIndex = randomNumber(randomIndex.size()-1);
+        int randomNumberToIndex = randomNumber(randomIndex.size() - 1);
 
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(randomNumberToIndex)))));
         imagen_1.setImage(imagen1);
 
-        Image imagen2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(randomNumberToIndex-1)))));
+        Image imagen2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(randomNumberToIndex - 1)))));
         imagen_2.setImage(imagen2);
 
         image_player.setImage(imagen1);
         image_enemy.setImage(imagen2);
-
-
 
     }
 
