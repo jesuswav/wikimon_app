@@ -823,6 +823,8 @@ public class HelloController {
     private Button ray_button;
     @FXML
     private Button water_button;
+    @FXML
+    private Button reload_game;
 
 
     //Function to the battle between pokemons -----------------------
@@ -914,16 +916,6 @@ public class HelloController {
         if (enemy_lives <= 0){
             //tie
             //set the victory in the result text
-            text_result_final.setText("PERDISTE");
-
-            fire_button.setDisable(true);
-            ray_button.setDisable(true);
-            water_button.setDisable(true);
-
-            button_tittle.setDefaultButton(true);
-        }else if (player_lives <= 0){
-            //you lose
-            //set the defeat in the result text
             text_result_final.setText("GANASTE");
 
             fire_button.setDisable(true);
@@ -931,6 +923,21 @@ public class HelloController {
             water_button.setDisable(true);
 
             button_tittle.setDefaultButton(true);
+
+            reload_game.setVisible(true);
+
+        }else if (player_lives <= 0){
+            //you lose
+            //set the defeat in the result text
+            text_result_final.setText("PERDISTE");
+
+            fire_button.setDisable(true);
+            ray_button.setDisable(true);
+            water_button.setDisable(true);
+
+            button_tittle.setDefaultButton(true);
+
+            reload_game.setVisible(true);
         }
     }
     public int randomNumber(int range){

@@ -163,5 +163,6 @@
       <TextField fx:id="text_result_final" alignment="CENTER" layoutX="312.0" layoutY="360.0" prefHeight="52.0" prefWidth="165.0" text="Resultado" />
       <Button fx:id="ray_button" layoutX="331.0" layoutY="128.0" mnemonicParsing="false" onAction="#buttonRay" prefHeight="53.0" prefWidth="125.0" text="Rayo" />
       <Button fx:id="fire_button" layoutX="460.0" layoutY="128.0" mnemonicParsing="false" onAction="#buttonFire" prefHeight="53.0" prefWidth="125.0" text="Fuego" />
+      <Button fx:id="reload_game" layoutX="343.0" layoutY="424.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="113.0" text="Reiniciar Juego" visible="false" />
    </children>
 </AnchorPane>
