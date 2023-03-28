@@ -176,7 +176,10 @@ public class HelloController {
     private Button button_add_pokemon;
     @FXML
     private Button randon_pokemons_buttons;
-
+    @FXML
+    private Label player_name;
+    @FXML
+    private Label enemy_name;
     //----------------------------------------end view submit--------------------
 
     //##########################################################################
@@ -403,6 +406,9 @@ public class HelloController {
         randon_pokemons_buttons.setVisible(false);
         reload_game.setVisible(false);
 
+        player_name.setVisible(false);
+        enemy_name.setVisible(false);
+
         //--------
         //Button to go to the view submit
         button_add_pokemon.setVisible(true);
@@ -464,6 +470,9 @@ public class HelloController {
         water_button.setVisible(true);
         ray_button.setVisible(true);
 
+        player_name.setVisible(true);
+        enemy_name.setVisible(true);
+
         randon_pokemons_buttons.setVisible(true);
         reload_game.setVisible(true);
 
@@ -496,22 +505,27 @@ public class HelloController {
         System.out.println(PokemonsDAO.ids);
     }
 
+
     public void imagesForBattles() {
+
+        int randomNumberToIndex = randomNumber(randomIndex.size() - 1);
+        int randomNumberToIndexEnemy = randomNumber(randomIndex.size() - 1);
 
         if (randomIndex.size() <= 0) {
             pokemonImages();
         }
 
-        int randomNumberToIndex = randomNumber(randomIndex.size() - 1);
+        player_name.setText(PokemonsDAO.names.get(randomNumberToIndex));
+        Image imagenPlayer = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomNumberToIndex))));
+        image_player.setImage(imagenPlayer);
 
-        Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(randomNumberToIndex)))));
-        imagen_1.setImage(imagen1);
+        enemy_name.setText(PokemonsDAO.names.get(randomNumberToIndexEnemy));
+        Image imagenEnemy = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomNumberToIndexEnemy))));
+        image_enemy.setImage(imagenEnemy);
 
-        Image imagen2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(randomNumberToIndex - 1)))));
-        imagen_2.setImage(imagen2);
+        System.out.println(PokemonsDAO.names.get(randomNumberToIndex));
+        System.out.println(PokemonsDAO.image_routes.get(randomNumberToIndex));
 
-        image_player.setImage(imagen1);
-        image_enemy.setImage(imagen2);
 
     }
 

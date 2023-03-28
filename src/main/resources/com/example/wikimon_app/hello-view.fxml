@@ -165,5 +165,7 @@
       <Button fx:id="fire_button" layoutX="462.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonFire" prefHeight="46.0" prefWidth="125.0" text="Fuego" />
       <Button fx:id="reload_game" layoutX="317.0" layoutY="425.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#reloadGame" prefHeight="39.0" prefWidth="165.0" text="Reiniciar Juego" visible="false" />
       <Button fx:id="randon_pokemons_buttons" layoutX="288.0" layoutY="310.0" mnemonicParsing="false" onAction="#selectRandomPokemons" prefHeight="53.0" prefWidth="222.0" text="Elige tu pokemon" />
+      <Label fx:id="player_name" layoutX="95.0" layoutY="325.0" text="Player" />
+      <Label fx:id="enemy_name" layoutX="658.0" layoutY="325.0" text="Enemy" />
    </children>
 </AnchorPane>
