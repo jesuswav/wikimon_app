@@ -174,6 +174,8 @@ public class HelloController {
     private TextArea text_area_description_send;
     @FXML
     private Button button_add_pokemon;
+    @FXML
+    private Button randon_pokemons_buttons;
 
     //----------------------------------------end view submit--------------------
 
@@ -260,24 +262,9 @@ public class HelloController {
     @FXML
     void goToViewTwo(ActionEvent event) {
 
-        //we call to the method that will pull the information from the BBDD
-        //conditional to check if the method is already called
-        if (ejecucionRead == false) {
-            PokemonsDAO.readRegisters();
-
-            for (int i = 0; i <= (PokemonsDAO.image_routes.size() - 1); i++) {
-                randomIndex.add(i);
-            }
+        if (randomIndex.size() <= 0){
+            pokemonImages();
         }
-
-        //pokemons that will be in the ImageViews
-
-        Collections.shuffle(randomIndex);
-        System.out.println("Lista desordenada");
-        System.out.println(randomIndex);
-
-        System.out.println("Ids");
-        System.out.println(PokemonsDAO.ids);
 
         //setting the images to the ImagesViews
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(0)))));
@@ -414,6 +401,8 @@ public class HelloController {
         water_button.setVisible(false);
         ray_button.setVisible(false);
 
+        randon_pokemons_buttons.setVisible(false);
+
         //--------
         //Button to go to the view submit
         button_add_pokemon.setVisible(true);
@@ -475,6 +464,41 @@ public class HelloController {
         water_button.setVisible(true);
         ray_button.setVisible(true);
 
+        randon_pokemons_buttons.setVisible(true);
+
+        imagesForBattles();
+    }
+
+    @FXML
+    void selectRandomPokemons(){
+        imagesForBattles();
+    }
+
+    public void pokemonImages(){
+        //we call to the method that will pull the information from the BBDD
+        //conditional to check if the method is already called
+        if (ejecucionRead == false) {
+            PokemonsDAO.readRegisters();
+
+            for (int i = 0; i <= (PokemonsDAO.image_routes.size() - 1); i++) {
+                randomIndex.add(i);
+            }
+        }
+
+        //pokemons that will be in the ImageViews
+
+        Collections.shuffle(randomIndex);
+        System.out.println("Lista desordenada");
+        System.out.println(randomIndex);
+
+        System.out.println("Ids");
+        System.out.println(PokemonsDAO.ids);
+    }
+
+    public void imagesForBattles(){
+
+        pokemonImages();
+
         int randomNumberToIndex = randomNumber(randomIndex.size()-1);
 
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(randomNumberToIndex)))));
@@ -485,8 +509,10 @@ public class HelloController {
 
         image_player.setImage(imagen1);
         image_enemy.setImage(imagen2);
-    }
 
+
+
+    }
 
 
     @FXML

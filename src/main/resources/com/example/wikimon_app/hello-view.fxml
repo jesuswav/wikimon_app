@@ -147,22 +147,23 @@
          <image>
             <Image url="@noImage.png" />
          </image></ImageView>
-      <TextField fx:id="text_result2" layoutX="341.0" layoutY="261.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="text_result1" layoutX="341.0" layoutY="222.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="text_player3" layoutX="208.0" layoutY="303.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="text_player2" layoutX="208.0" layoutY="263.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="text_player1" layoutX="208.0" layoutY="222.0" prefHeight="25.0" prefWidth="113.0" />
-      <ImageView fx:id="image_enemy" fitHeight="165.0" fitWidth="207.0" layoutX="593.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="text_result2" editable="false" layoutX="341.0" layoutY="261.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="text_result1" editable="false" layoutX="341.0" layoutY="222.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="text_player3" editable="false" layoutX="208.0" layoutY="303.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="text_player2" editable="false" layoutX="208.0" layoutY="263.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="text_player1" editable="false" layoutX="208.0" layoutY="222.0" prefHeight="25.0" prefWidth="113.0" />
+      <ImageView fx:id="image_enemy" fitHeight="165.0" fitWidth="207.0" layoutX="593.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@noImage.png" />
          </image></ImageView>
-      <TextField fx:id="text_result3" layoutX="341.0" layoutY="303.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="text_enemy3" layoutX="471.0" layoutY="303.0" prefHeight="25.0" prefWidth="103.0" />
-      <TextField fx:id="text_enemy2" layoutX="471.0" layoutY="261.0" prefHeight="25.0" prefWidth="103.0" />
-      <TextField fx:id="text_enemy1" layoutX="471.0" layoutY="222.0" prefHeight="25.0" prefWidth="103.0" />
-      <TextField fx:id="text_result_final" alignment="CENTER" layoutX="312.0" layoutY="360.0" prefHeight="52.0" prefWidth="165.0" text="Resultado" />
+      <TextField fx:id="text_result3" editable="false" layoutX="341.0" layoutY="303.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="text_enemy3" editable="false" layoutX="471.0" layoutY="303.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="text_enemy2" editable="false" layoutX="471.0" layoutY="261.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="text_enemy1" editable="false" layoutX="471.0" layoutY="222.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="text_result_final" alignment="CENTER" layoutX="312.0" layoutY="362.0" prefHeight="52.0" prefWidth="165.0" text="Resultado" />
       <Button fx:id="ray_button" layoutX="331.0" layoutY="128.0" mnemonicParsing="false" onAction="#buttonRay" prefHeight="53.0" prefWidth="125.0" text="Rayo" />
       <Button fx:id="fire_button" layoutX="460.0" layoutY="128.0" mnemonicParsing="false" onAction="#buttonFire" prefHeight="53.0" prefWidth="125.0" text="Fuego" />
       <Button fx:id="reload_game" layoutX="343.0" layoutY="424.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="113.0" text="Reiniciar Juego" visible="false" />
+      <Button fx:id="randon_pokemons_buttons" layoutX="338.0" layoutY="332.0" mnemonicParsing="false" onAction="#selectRandomPokemons" text="Random Pokemons" />
    </children>
 </AnchorPane>
