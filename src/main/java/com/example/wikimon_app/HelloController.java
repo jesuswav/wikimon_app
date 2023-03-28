@@ -272,7 +272,6 @@ public class HelloController {
 
         //pokemons that will be in the ImageViews
 
-
         Collections.shuffle(randomIndex);
         System.out.println("Lista desordenada");
         System.out.println(randomIndex);
