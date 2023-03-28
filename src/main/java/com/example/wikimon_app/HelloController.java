@@ -177,10 +177,6 @@ public class HelloController {
 
     //----------------------------------------end view submit--------------------
 
-
-    //objects Image for the ImageView´s
-    //Image imagen1 = new Image(getClass().getResourceAsStream("/src/main/resources/Chikorita_E1.jpg"));
-
     //##########################################################################
     //Button of the first view in the program
     @FXML
@@ -264,20 +260,12 @@ public class HelloController {
     @FXML
     void goToViewTwo(ActionEvent event) {
 
-        /*ConectionBBDD connection = new ConectionBBDD();
-
-        try (Connection cnx = connection.getConnection()){
-            System.out.println("Successful conection");
-        }catch (Exception e){
-            System.out.println(e);
-        }*/
-
         //we call to the method that will pull the information from the BBDD
         //conditional to check if the method is already called
         if (ejecucionRead == false) {
             PokemonsDAO.readRegisters();
 
-            for (int i = 0; i <=(PokemonsDAO.image_routes.size()-1); i++) {
+            for (int i = 0; i <= (PokemonsDAO.image_routes.size()-1); i++) {
                 randomIndex.add(i);
             }
         }
@@ -532,7 +520,6 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
-
     @FXML
     void detalles2(ActionEvent event){
         goToViewTree();
@@ -729,4 +716,87 @@ public class HelloController {
         text_area_description_send.setText("");
     }
 
+    //Function to the battle between pokemons -----------------------
+
+    int enemy_lives = 3;
+    int player_lives = 3;
+    String enemy_attack;
+    String player_attack;
+
+    @FXML
+    void playBattle(ActionEvent event){
+        //a new battle starts every time the user press the button play
+        //when the lives of any one of the opponents is on 0 the button play is disabled
+        enemy_attack = enemyAttack();
+        player_attack = playerAttack();
+
+        //set the variables in the text squares
+
+        if (player_attack == enemy_attack){
+            //tie
+        }else if (player_attack == "water" && enemy_attack == "ray") {
+            //you lose
+            player_lives --;
+        }else if (player_attack == "fire" && enemy_attack == "water") {
+            //you lose
+            player_lives --;
+        }else if (player_attack == "ray" && enemy_attack == "fire") {
+            //you lose
+            player_lives --;
+        }else {
+            //you win
+            player_lives ++;
+        }
+
+        checkLives();
+    }
+
+    public String enemyAttack(){
+        int randomnumber = randomNumber(3);
+        switch (randomnumber){
+            case 1:
+                enemy_attack = "water";
+                break;
+            case 2:
+                enemy_attack = "ray";
+                break;
+            case 3:
+                enemy_attack = "fire";
+        }
+        return enemy_attack;
+    }
+    public String playerAttack(){
+        int randomnumber = randomNumber(3);
+        switch (randomnumber){
+            case 1:
+                enemy_attack = "water";
+                break;
+            case 2:
+                enemy_attack = "ray";
+                break;
+            case 3:
+                enemy_attack = "fire";
+        }
+        return player_attack;
+    }
+
+    public void checkLives(){
+        if (enemy_lives <= player_lives){
+            //tie
+            //set the victory in the result text
+            button_tittle.setDisable(true);
+        }else if (player_lives <= 0){
+            //you lose
+            //set the defeat in the result text
+            button_tittle.setDisable(true);
+        } else if (enemy_lives <= 0) {
+            //you win
+            //set the victory in the result text
+            button_tittle.setDisable(true);
+        }
+    }
+    public int randomNumber(int range){
+        int numero = (int)(Math.random()*range+1);
+        return numero;
+    }
 }
