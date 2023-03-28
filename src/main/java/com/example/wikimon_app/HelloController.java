@@ -265,7 +265,7 @@ public class HelloController {
         if (ejecucionRead == false) {
             PokemonsDAO.readRegisters();
 
-            for (int i = 0; i <= (PokemonsDAO.image_routes.size()-1); i++) {
+            for (int i = 0; i <= (PokemonsDAO.image_routes.size() - 1); i++) {
                 randomIndex.add(i);
             }
         }
@@ -393,6 +393,27 @@ public class HelloController {
         text_pokeball_send.setVisible(false);
         text_weight_send.setVisible(false);
 
+        //buttons of the view battle
+        text_result1.setVisible(false);
+        text_result2.setVisible(false);
+        text_result3.setVisible(false);
+        text_result_final.setVisible(false);
+        text_player1.setVisible(false);
+        text_player1.setVisible(false);
+        text_player2.setVisible(false);
+        text_player3.setVisible(false);
+        text_enemy1.setVisible(false);
+        text_enemy2.setVisible(false);
+        text_enemy3.setVisible(false);
+        label_result.setVisible(false);
+        label_attack1.setVisible(false);
+        label_attack2.setVisible(false);
+        image_enemy.setVisible(false);
+        image_player.setVisible(false);
+        fire_button.setVisible(false);
+        water_button.setVisible(false);
+        ray_button.setVisible(false);
+
         //--------
         //Button to go to the view submit
         button_add_pokemon.setVisible(true);
@@ -403,7 +424,7 @@ public class HelloController {
     }
 
     @FXML
-    void goToViewBattle(ActionEvent event){
+    void goToViewBattle(ActionEvent event) {
         //We make the buttons of the view1 visible again
         button_1.setVisible(false);
         button_2.setVisible(false);
@@ -433,6 +454,26 @@ public class HelloController {
 
         label_tittle.setVisible(true);
         button_tittle.setVisible(true);
+
+        text_result1.setVisible(true);
+        text_result2.setVisible(true);
+        text_result3.setVisible(true);
+        text_result_final.setVisible(true);
+        text_player1.setVisible(true);
+        text_player1.setVisible(true);
+        text_player2.setVisible(true);
+        text_player3.setVisible(true);
+        text_enemy1.setVisible(true);
+        text_enemy2.setVisible(true);
+        text_enemy3.setVisible(true);
+        label_result.setVisible(true);
+        label_attack1.setVisible(true);
+        label_attack2.setVisible(true);
+        image_enemy.setVisible(true);
+        image_player.setVisible(true);
+        fire_button.setVisible(true);
+        water_button.setVisible(true);
+        ray_button.setVisible(true);
     }
 
     @FXML
@@ -492,11 +533,13 @@ public class HelloController {
         imagen_7.setVisible(false);
         imagen_8.setVisible(false);
 
+        buttonBattle.setVisible(false);
+
     }
 
     //Methods to buttons Detalles ------------------------------
     @FXML
-    void detalles1(ActionEvent event){
+    void detalles1(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(0)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(0)))));
@@ -519,8 +562,9 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
+
     @FXML
-    void detalles2(ActionEvent event){
+    void detalles2(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(1)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(1)))));
@@ -543,8 +587,9 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(3)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
+
     @FXML
-    void detalles3(ActionEvent event){
+    void detalles3(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(2)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
@@ -567,8 +612,9 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(6)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
+
     @FXML
-    void detalles4(ActionEvent event){
+    void detalles4(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(3)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(3)))));
@@ -591,8 +637,9 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
+
     @FXML
-    void detalles5(ActionEvent event){
+    void detalles5(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(4)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(4)))));
@@ -615,8 +662,9 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
+
     @FXML
-    void detalles6(ActionEvent event){
+    void detalles6(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(5)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(5)))));
@@ -639,8 +687,9 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
+
     @FXML
-    void detalles7(ActionEvent event){
+    void detalles7(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(6)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(6)))));
@@ -663,8 +712,9 @@ public class HelloController {
         Image pokemonSimilar3 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(2)))));
         similar_pokemon3.setImage(pokemonSimilar3);
     }
+
     @FXML
-    void detalles8(ActionEvent event){
+    void detalles8(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(7)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
@@ -688,7 +738,7 @@ public class HelloController {
         similar_pokemon3.setImage(pokemonSimilar3);
     }
 
-    public void buttonSubmit(ActionEvent event){
+    public void buttonSubmit(ActionEvent event) {
         //we set the data of the objects in the viewSubmit in the variables of the
         //class Pokemones, to give this data to the method createPokemon
         Pokemones pokemon = new Pokemones(text_name_send.getText(), text_image_send.getText(),
@@ -713,41 +763,123 @@ public class HelloController {
         text_evo2_send.setText("");
         text_pokeball_send.setText("");
         text_area_description_send.setText("");
+
     }
+
+    //variables from scene builder to  use the elements in the view battle
+
+    @FXML
+    private TextField text_result1;
+    @FXML
+    private TextField text_result2;
+    @FXML
+    private TextField text_result3;
+    @FXML
+    private TextField text_result_final;
+
+    @FXML
+    private TextField text_player1;
+    @FXML
+    private TextField text_player2;
+    @FXML
+    private TextField text_player3;
+
+    @FXML
+    private TextField text_enemy1;
+    @FXML
+    private TextField text_enemy2;
+    @FXML
+    private TextField text_enemy3;
+
+    @FXML
+    private Label label_result;
+
+    @FXML
+    private Label label_attack1;
+    @FXML
+    private Label label_attack2;
+
+    @FXML
+    private ImageView image_enemy;
+    @FXML
+    private ImageView image_player;
+
+    @FXML
+    private Button fire_button;
+    @FXML
+    private Button ray_button;
+    @FXML
+    private Button water_button;
+
 
     //Function to the battle between pokemons -----------------------
 
     int enemy_lives = 3;
     int player_lives = 3;
     String enemy_attack;
-    String player_attack;
 
-    @FXML
-    void playBattle(ActionEvent event){
+    String battle1;
+
+    String battle_player;
+    String battle_enemy;
+
+
+    public String playBattle(String player_attack){
+        String resultado;
         //a new battle starts every time the user press the button play
         //when the lives of any one of the opponents is on 0 the button play is disabled
         enemy_attack = enemyAttack();
-        player_attack = playerAttack();
 
         //set the variables in the text squares
 
         if (player_attack == enemy_attack){
             //tie
+            resultado = "Empate";
         }else if (player_attack == "water" && enemy_attack == "ray") {
             //you lose
+            resultado = "Perdiste";
             player_lives --;
         }else if (player_attack == "fire" && enemy_attack == "water") {
             //you lose
+            resultado = "Perdiste";
             player_lives --;
         }else if (player_attack == "ray" && enemy_attack == "fire") {
             //you lose
+            resultado = "Perdiste";
             player_lives --;
         }else {
             //you win
-            player_lives ++;
+            resultado = "Ganaste";
+            enemy_lives --;
         }
 
+        battle_player = player_attack;
+        battle_enemy = enemy_attack;
+
         checkLives();
+        return resultado;
+    }
+
+    @FXML
+    void buttonWater(ActionEvent event){
+        battle1 = playBattle("water");
+        text_player1.setText(battle_player);
+        text_enemy1.setText(battle_enemy);
+        text_result1.setText(battle1);
+    }
+    @FXML
+    void buttonRay(ActionEvent event){
+        battle1 = playBattle("ray");
+        text_player2.setText(battle_player);
+        text_enemy2.setText(battle_enemy);
+        text_result2.setText(battle1);
+    }
+    @FXML
+    void buttonFire(ActionEvent event){
+        battle1 = playBattle("water");
+        text_player3.setText(battle_player);
+        text_enemy3.setText(battle_enemy);
+        text_result3.setText(battle1);
     }
 
     public String enemyAttack(){
@@ -764,34 +896,28 @@ public class HelloController {
         }
         return enemy_attack;
     }
-    public String playerAttack(){
-        int randomnumber = randomNumber(3);
-        switch (randomnumber){
-            case 1:
-                enemy_attack = "water";
-                break;
-            case 2:
-                enemy_attack = "ray";
-                break;
-            case 3:
-                enemy_attack = "fire";
-        }
-        return player_attack;
-    }
 
     public void checkLives(){
-        if (enemy_lives <= player_lives){
+        if (enemy_lives <= 0){
             //tie
             //set the victory in the result text
-            button_tittle.setDisable(true);
+            text_result_final.setText("PERDISTE");
+
+            fire_button.setDisable(true);
+            ray_button.setDisable(true);
+            water_button.setDisable(true);
+
+            button_tittle.setDefaultButton(true);
         }else if (player_lives <= 0){
             //you lose
             //set the defeat in the result text
-            button_tittle.setDisable(true);
-        } else if (enemy_lives <= 0) {
-            //you win
-            //set the victory in the result text
-            button_tittle.setDisable(true);
+            text_result_final.setText("GANASTE");
+
+            fire_button.setDisable(true);
+            ray_button.setDisable(true);
+            water_button.setDisable(true);
+
+            button_tittle.setDefaultButton(true);
         }
     }
     public int randomNumber(int range){
