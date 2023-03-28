@@ -262,10 +262,6 @@ public class HelloController {
     @FXML
     void goToViewTwo(ActionEvent event) {
 
-        if (randomIndex.size() <= 0){
-            pokemonImages();
-        }
-
         //setting the images to the ImagesViews
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(0)))));
         imagen_1.setImage(imagen1);
@@ -499,7 +495,9 @@ public class HelloController {
 
     public void imagesForBattles(){
 
-        pokemonImages();
+        if (randomIndex.size() <= 0){
+            pokemonImages();
+        }
 
         int randomNumberToIndex = randomNumber(randomIndex.size()-1);
 
@@ -854,7 +852,6 @@ public class HelloController {
     @FXML
     private Button reload_game;
 
-
     //Function to the battle between pokemons -----------------------
 
     int enemy_lives = 3;
@@ -903,6 +900,29 @@ public class HelloController {
         return resultado;
     }
 
+    @FXML
+    void reloadGame(ActionEvent event) {
+        fire_button.setDisable(false);
+        ray_button.setDisable(false);
+        water_button.setDisable(false);
+
+        text_player1.setText("");
+        text_player2.setText("");
+        text_player3.setText("");
+
+        text_enemy1.setText("");
+        text_enemy2.setText("");
+        text_enemy3.setText("");
+
+        text_result1.setText("");
+        text_result2.setText("");
+        text_result3.setText("");
+
+        text_result_final.setText("RESULTADO");
+
+        player_lives = 3;
+        enemy_lives = 3;
+    }
     @FXML
     void buttonWater(ActionEvent event){
         battle1 = playBattle("water");
