@@ -402,6 +402,7 @@ public class HelloController {
         ray_button.setVisible(false);
 
         randon_pokemons_buttons.setVisible(false);
+        reload_game.setVisible(false);
 
         //--------
         //Button to go to the view submit
@@ -465,6 +466,7 @@ public class HelloController {
         ray_button.setVisible(true);
 
         randon_pokemons_buttons.setVisible(true);
+        reload_game.setVisible(true);
 
         imagesForBattles();
     }
