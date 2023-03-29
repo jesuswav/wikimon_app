@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wikimon_app.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="789.0" style="-fx-background-color: #F8F878;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wikimon_app.HelloController">
    <children>
       <ImageView fx:id="imagen_1" fitHeight="153.0" fitWidth="165.0" layoutX="24.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
@@ -78,12 +78,7 @@
       <TextField fx:id="text_category" layoutX="396.0" layoutY="171.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
       <TextField fx:id="text_element" layoutX="396.0" layoutY="208.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
       <TextField fx:id="text_pokeball" layoutX="396.0" layoutY="245.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
-      <Button fx:id="button_tittle" layoutX="538.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="142.0" text="Base de Pokemones" />
-      <Label fx:id="label_tittle" layoutX="119.0" layoutY="19.0" prefHeight="62.0" prefWidth="165.0" text="WIKIMON" textAlignment="RIGHT" wrapText="true">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
+      <Button fx:id="button_tittle" layoutX="538.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="142.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Base de Pokemones" />
       <Button fx:id="buttonBack" layoutX="13.0" layoutY="1.0" mnemonicParsing="false" onAction="#goToViewTwo" text="Go to DataBase" visible="false" />
       <ImageView fx:id="img_evolucion1" fitHeight="103.0" fitWidth="103.0" layoutX="360.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
@@ -139,10 +134,16 @@
       <TextArea fx:id="text_area_description_send" layoutX="345.0" layoutY="361.0" prefHeight="80.0" prefWidth="207.0" visible="false" />
       <Button fx:id="buttonBattle" layoutX="24.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewBattle" text="Go to battle!" visible="false" />
 
-      <Label fx:id="label_attack1" layoutX="240.0" layoutY="160.0" text="Ataque" />
-      <Label fx:id="label_result" layoutX="370.0" layoutY="160.0" text="Resultado" />
-      <Label fx:id="label_attack2" layoutX="500.0" layoutY="160.0" text="Ataque" />
-      <Button fx:id="water_button" layoutX="200.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonWater" prefHeight="46.0" prefWidth="125.0" text="Agua" />
+      <Label fx:id="label_attack1" layoutX="240.0" layoutY="160.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Ataque" />
+      <Label fx:id="label_result" layoutX="370.0" layoutY="160.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Resultado" />
+      <Label fx:id="label_attack2" layoutX="500.0" layoutY="160.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Ataque">
+         <font>
+            <Font name="Old English Text MT" size="12.0" />
+         </font></Label>
+      <Button fx:id="water_button" layoutX="200.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonWater" prefHeight="46.0" prefWidth="125.0" text="Agua">
+         <font>
+            <Font name="OCR A Extended" size="12.0" />
+         </font></Button>
       <ImageView fx:id="image_player" fitHeight="191.0" fitWidth="165.0" layoutX="28.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@noImage.png" />
@@ -160,15 +161,20 @@
       <TextField fx:id="text_enemy3" editable="false" layoutX="469.0" layoutY="273.0" prefHeight="25.0" prefWidth="113.0" />
       <TextField fx:id="text_enemy2" editable="false" layoutX="469.0" layoutY="226.0" prefHeight="25.0" prefWidth="113.0" />
       <TextField fx:id="text_enemy1" editable="false" layoutX="469.0" layoutY="187.0" prefHeight="25.0" prefWidth="113.0" />
-      <TextField fx:id="text_result_final" alignment="CENTER" editable="false" layoutX="323.0" layoutY="371.0" prefHeight="46.0" prefWidth="153.0" text="Resultado" />
-      <Button fx:id="ray_button" layoutX="331.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonRay" prefHeight="46.0" prefWidth="125.0" text="Rayo" />
-      <Button fx:id="fire_button" layoutX="462.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonFire" prefHeight="46.0" prefWidth="125.0" text="Fuego" />
+      <TextField fx:id="text_result_final" alignment="CENTER" editable="false" layoutX="323.0" layoutY="371.0" prefHeight="46.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Resultado" />
+      <Button fx:id="ray_button" layoutX="331.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonRay" prefHeight="46.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Rayo" />
+      <Button fx:id="fire_button" layoutX="462.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonFire" prefHeight="46.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Fuego" />
       <Button fx:id="reload_game" layoutX="317.0" layoutY="425.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#reloadGame" prefHeight="39.0" prefWidth="165.0" text="Reiniciar Juego" visible="false" />
-      <Button fx:id="randon_pokemons_buttons" layoutX="288.0" layoutY="310.0" mnemonicParsing="false" onAction="#selectRandomPokemons" prefHeight="53.0" prefWidth="222.0" text="Elige tu pokemon" />
-      <Label fx:id="player_name" layoutX="95.0" layoutY="325.0" text="Player" />
-      <Label fx:id="enemy_name" layoutX="658.0" layoutY="325.0" text="Enemy" />
+      <Button fx:id="randon_pokemons_buttons" layoutX="288.0" layoutY="310.0" mnemonicParsing="false" onAction="#selectRandomPokemons" prefHeight="53.0" prefWidth="222.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Elige tu pokemon" />
+      <Label fx:id="player_name" layoutX="95.0" layoutY="325.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="PLAYER" />
+      <Label fx:id="enemy_name" layoutX="658.0" layoutY="325.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="ENEMY" />
       <Button fx:id="similarDetails_1" layoutX="632.0" layoutY="156.0" mnemonicParsing="false" onAction="#similarDetails1" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
       <Button fx:id="similarDetails_2" layoutX="632.0" layoutY="293.0" mnemonicParsing="false" onAction="#similarDetails2" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
       <Button fx:id="similarDetails_3" layoutX="632.0" layoutY="435.0" mnemonicParsing="false" onAction="#similarDetails3" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
+      <ImageView fitHeight="116.0" fitWidth="196.0" layoutX="19.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Downloads/IMG_20230329_084843.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
