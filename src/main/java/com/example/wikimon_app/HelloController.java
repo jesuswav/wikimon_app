@@ -194,6 +194,12 @@ public class HelloController {
     @FXML
     private ImageView img_tittle;
 
+    @FXML
+    private ImageView img_backgroud_2_1;
+
+    @FXML
+    private ImageView img_backgroud_2_2;
+
     //------------------Methods--------------------------------
 
     //Function to go to the next view using setVisible -------
@@ -278,7 +284,7 @@ public class HelloController {
         //setting the images to the ImagesViews
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(0)))));
         imagen_1.setImage(imagen1);
-
+        /*
         Image imagen2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(1)))));
         imagen_2.setImage(imagen2);
 
@@ -298,7 +304,7 @@ public class HelloController {
         imagen_7.setImage(imagen7);
 
         Image imagen8 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
-        imagen_8.setImage(imagen8);
+        imagen_8.setImage(imagen8);*/
 
         //-----------------------------------------------------------
 
@@ -325,6 +331,10 @@ public class HelloController {
         imagen_6.setVisible(true);
         imagen_7.setVisible(true);
         imagen_8.setVisible(true);
+
+        //images for backgroud
+        img_backgroud_2_1.setVisible(true);
+        img_backgroud_2_2.setVisible(true);
 
         button_add_pokemon.setVisible(true);
 
@@ -525,6 +535,10 @@ public class HelloController {
 
         int randomNumberToIndex = randomNumber(randomIndex.size() - 1);
         int randomNumberToIndexEnemy = randomNumber(randomIndex.size() - 4);
+
+        if (randomNumberToIndexEnemy == randomNumberToIndex){
+            randomNumberToIndexEnemy = randomNumber(randomIndex.size() -2);
+        }
 
         player_name.setText(PokemonsDAO.names.get(randomNumberToIndex));
         Image imagenPlayer = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomNumberToIndex))));

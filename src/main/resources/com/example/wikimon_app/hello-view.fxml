@@ -9,58 +9,68 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="789.0" style="-fx-background-color: #F8F878;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wikimon_app.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="789.0" style="-fx-background-color: #EAEAEA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wikimon_app.HelloController">
    <children>
-      <ImageView fx:id="imagen_1" fitHeight="153.0" fitWidth="165.0" layoutX="24.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="img_backgroud_2_1" fitHeight="483.0" fitWidth="483.0" layoutX="311.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@1680189322609.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_backgroud_2_2" fitHeight="483.0" fitWidth="511.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@1680189322609.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagen_1" fitHeight="153.0" fitWidth="165.0" layoutX="24.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_2" fitHeight="153.0" fitWidth="159.0" layoutX="219.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_2" fitHeight="153.0" fitWidth="159.0" layoutX="226.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_3" fitHeight="153.0" fitWidth="153.0" layoutX="409.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_3" fitHeight="153.0" fitWidth="153.0" layoutX="422.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_4" fitHeight="153.0" fitWidth="165.0" layoutX="602.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_4" fitHeight="153.0" fitWidth="165.0" layoutX="613.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_5" fitHeight="153.0" fitWidth="165.0" layoutX="25.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_5" fitHeight="153.0" fitWidth="165.0" layoutX="25.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_6" fitHeight="153.0" fitWidth="172.0" layoutX="219.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_6" fitHeight="153.0" fitWidth="172.0" layoutX="226.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_7" fitHeight="153.0" fitWidth="183.0" layoutX="409.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_7" fitHeight="153.0" fitWidth="183.0" layoutX="422.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imagen_8" fitHeight="153.0" fitWidth="176.0" layoutX="602.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imagen_8" fitHeight="153.0" fitWidth="176.0" layoutX="613.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
          </image>
       </ImageView>
-      <Button fx:id="button_1" layoutX="24.0" layoutY="202.0" mnemonicParsing="false" onAction="#detalles1" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_5" layoutX="24.0" layoutY="389.0" mnemonicParsing="false" onAction="#detalles5" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_2" layoutX="218.0" layoutY="200.0" mnemonicParsing="false" onAction="#detalles2" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_6" layoutX="220.0" layoutY="389.0" mnemonicParsing="false" onAction="#detalles6" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_3" layoutX="409.0" layoutY="200.0" mnemonicParsing="false" onAction="#detalles3" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_7" layoutX="410.0" layoutY="389.0" mnemonicParsing="false" onAction="#detalles7" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_4" layoutX="602.0" layoutY="200.0" mnemonicParsing="false" onAction="#detalles4" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <Button fx:id="button_8" layoutX="602.0" layoutY="388.0" mnemonicParsing="false" onAction="#detalles8" prefHeight="25.0" prefWidth="153.0" text="Detalles" visible="false" />
-      <TextField fx:id="searchText" layoutX="559.0" layoutY="4.0" visible="false" />
-      <Button fx:id="search_button" layoutX="716.0" layoutY="4.0" mnemonicParsing="false" onAction="#showPokemon" prefHeight="25.0" prefWidth="59.0" text="Buscar" visible="false" />
+      <Button fx:id="button_1" layoutX="24.0" layoutY="207.0" mnemonicParsing="false" onAction="#detalles1" prefHeight="25.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-text-fill: #ffffff;" text="Detalles" visible="false" />
+      <Button fx:id="button_5" layoutX="25.0" layoutY="395.0" mnemonicParsing="false" onAction="#detalles5" prefHeight="25.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-text-fill: #ffffff;" text="Detalles" visible="false" />
+      <Button fx:id="button_2" layoutX="226.0" layoutY="208.0" mnemonicParsing="false" onAction="#detalles2" prefHeight="25.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-text-fill: #ffffff;" text="Detalles" visible="false" />
+      <Button fx:id="button_6" layoutX="226.0" layoutY="395.0" mnemonicParsing="false" onAction="#detalles6" prefHeight="25.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-text-fill: #ffffff;" text="Detalles" visible="false" />
+      <Button fx:id="button_3" layoutX="422.0" layoutY="208.0" mnemonicParsing="false" onAction="#detalles3" prefHeight="25.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-text-fill: #ffffff;" text="Detalles" visible="false" />
+      <Button fx:id="button_7" layoutX="422.0" layoutY="395.0" mnemonicParsing="false" onAction="#detalles7" prefHeight="25.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-text-fill: #ffffff;" text="Detalles" visible="false" />
+      <Button fx:id="button_4" layoutX="614.0" layoutY="208.0" mnemonicParsing="false" onAction="#detalles4" prefHeight="25.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-text-fill: #ffffff;" text="Detalles" visible="false" />
+      <Button fx:id="button_8" layoutX="613.0" layoutY="395.0" mnemonicParsing="false" onAction="#detalles8" prefHeight="25.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-text-fill: #ffffff;" text="Detalles" visible="false" />
+      <TextField fx:id="searchText" layoutX="546.0" layoutY="4.0" visible="false" />
+      <Button fx:id="search_button" layoutX="702.0" layoutY="3.0" mnemonicParsing="false" onAction="#showPokemon" prefHeight="25.0" prefWidth="66.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: EFD626; -fx-text-fill: #ffffff;" text="Buscar" visible="false" />
       <ImageView fx:id="pokemon_image" fitHeight="257.0" fitWidth="280.0" layoutX="33.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
@@ -78,8 +88,11 @@
       <TextField fx:id="text_category" layoutX="396.0" layoutY="171.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
       <TextField fx:id="text_element" layoutX="396.0" layoutY="208.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
       <TextField fx:id="text_pokeball" layoutX="396.0" layoutY="245.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
-      <Button fx:id="button_tittle" layoutX="538.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="142.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Base de Pokemones" />
-      <Button fx:id="buttonBack" layoutX="13.0" layoutY="1.0" mnemonicParsing="false" onAction="#goToViewTwo" text="Go to DataBase" visible="false" />
+      <Button fx:id="button_tittle" defaultButton="true" layoutX="538.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="142.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Base de Pokemones" />
+      <Button fx:id="buttonBack" layoutX="24.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewTwo" style="-fx-background-color: #ffffff;" text="Go to DataBase" visible="false">
+         <font>
+            <Font name="OCR A Extended" size="12.0" />
+         </font></Button>
       <ImageView fx:id="img_evolucion1" fitHeight="103.0" fitWidth="103.0" layoutX="360.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@noImage.png" />
@@ -130,9 +143,9 @@
       <TextField fx:id="text_pokeball_send" layoutX="345.0" layoutY="324.0" visible="false" />
       <Label fx:id="label_element_send" layoutX="289.0" layoutY="232.0" text="Elemento:" visible="false" />
       <Button fx:id="button_submit" layoutX="514.0" layoutY="316.0" mnemonicParsing="false" onAction="#buttonSubmit" text="Enviar" visible="false" />
-      <Button fx:id="button_add_pokemon" layoutX="439.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewSubmit" text="Agregar pokemon" visible="false" />
+      <Button fx:id="button_add_pokemon" layoutX="414.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewSubmit" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #ffffff;" text="Agregar pokemon" visible="false" />
       <TextArea fx:id="text_area_description_send" layoutX="345.0" layoutY="361.0" prefHeight="80.0" prefWidth="207.0" visible="false" />
-      <Button fx:id="buttonBattle" layoutX="24.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewBattle" text="Go to battle!" visible="false" />
+      <Button fx:id="buttonBattle" layoutX="24.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewBattle" style="-fx-background-color: #ffffff; -fx-font-family: &quot;OCR A Extended&quot;;" text="Go to battle!" visible="false" />
 
       <Label fx:id="label_attack1" layoutX="240.0" layoutY="160.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Ataque" />
       <Label fx:id="label_result" layoutX="370.0" layoutY="160.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Resultado" />
@@ -164,14 +177,14 @@
       <TextField fx:id="text_result_final" alignment="CENTER" editable="false" layoutX="323.0" layoutY="371.0" prefHeight="46.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Resultado" />
       <Button fx:id="ray_button" layoutX="331.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonRay" prefHeight="46.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Rayo" />
       <Button fx:id="fire_button" layoutX="462.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonFire" prefHeight="46.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Fuego" />
-      <Button fx:id="reload_game" layoutX="317.0" layoutY="425.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#reloadGame" prefHeight="39.0" prefWidth="165.0" text="Reiniciar Juego" visible="false" />
+      <Button fx:id="reload_game" layoutX="317.0" layoutY="425.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#reloadGame" prefHeight="39.0" prefWidth="165.0" text="Reiniciar Juego" />
       <Button fx:id="randon_pokemons_buttons" layoutX="288.0" layoutY="310.0" mnemonicParsing="false" onAction="#selectRandomPokemons" prefHeight="53.0" prefWidth="222.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Elige tu pokemon" />
       <Label fx:id="player_name" layoutX="95.0" layoutY="325.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="PLAYER" />
       <Label fx:id="enemy_name" layoutX="658.0" layoutY="325.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="ENEMY" />
       <Button fx:id="similarDetails_1" layoutX="632.0" layoutY="156.0" mnemonicParsing="false" onAction="#similarDetails1" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
       <Button fx:id="similarDetails_2" layoutX="632.0" layoutY="293.0" mnemonicParsing="false" onAction="#similarDetails2" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
       <Button fx:id="similarDetails_3" layoutX="632.0" layoutY="435.0" mnemonicParsing="false" onAction="#similarDetails3" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
-      <ImageView fx:id="img_tittle" fitHeight="116.0" fitWidth="196.0" layoutX="19.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img_tittle" fitHeight="116.0" fitWidth="196.0" layoutX="60.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@IMG_20230329_084843.png" />
          </image>
