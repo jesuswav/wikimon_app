@@ -191,6 +191,9 @@ public class HelloController {
     @FXML
     private Label label_tittle;
 
+    @FXML
+    private ImageView img_tittle;
+
     //------------------Methods--------------------------------
 
     //Function to go to the next view using setVisible -------
@@ -346,7 +349,7 @@ public class HelloController {
 
         //we make the elements of the first view invisible
         button_tittle.setVisible(false);
-        label_tittle.setVisible(false);
+        img_tittle.setVisible(false);
 
         //we make visible the button of search and the TextField
         search_button.setVisible(true);
@@ -455,7 +458,7 @@ public class HelloController {
         search_button.setVisible(false);
         searchText.setVisible(false);
 
-        label_tittle.setVisible(true);
+        img_tittle.setVisible(true);
         button_tittle.setVisible(true);
 
         text_result1.setVisible(true);

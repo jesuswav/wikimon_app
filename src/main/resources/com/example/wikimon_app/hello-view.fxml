@@ -171,9 +171,9 @@
       <Button fx:id="similarDetails_1" layoutX="632.0" layoutY="156.0" mnemonicParsing="false" onAction="#similarDetails1" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
       <Button fx:id="similarDetails_2" layoutX="632.0" layoutY="293.0" mnemonicParsing="false" onAction="#similarDetails2" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
       <Button fx:id="similarDetails_3" layoutX="632.0" layoutY="435.0" mnemonicParsing="false" onAction="#similarDetails3" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
-      <ImageView fitHeight="116.0" fitWidth="196.0" layoutX="19.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img_tittle" fitHeight="116.0" fitWidth="196.0" layoutX="19.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Downloads/IMG_20230329_084843.png" />
+            <Image url="@IMG_20230329_084843.png" />
          </image>
       </ImageView>
    </children>
