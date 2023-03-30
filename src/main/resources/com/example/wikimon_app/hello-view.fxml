@@ -120,7 +120,6 @@
       </ImageView>
       <TextArea fx:id="text_area_descripcion" layoutX="35.0" layoutY="328.0" prefHeight="124.0" prefWidth="257.0" visible="false" />
       <Label fx:id="label_descripcion" layoutX="35.0" layoutY="303.0" prefHeight="0.0" prefWidth="65.0" text="Descripción:" visible="false" />
-      <Label layoutX="442.0" layoutY="307.0" text="Evoluciones:" visible="false" />
       <Label layoutX="668.0" layoutY="38.0" text="Similares:" visible="false" />
 
       <Label fx:id="label_name_send" layoutX="295.0" layoutY="63.0" text="Nombre:" visible="false" />
@@ -178,7 +177,6 @@
       <Button fx:id="ray_button" layoutX="331.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonRay" prefHeight="46.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Rayo" />
       <Button fx:id="fire_button" layoutX="462.0" layoutY="96.0" mnemonicParsing="false" onAction="#buttonFire" prefHeight="46.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Fuego" />
       <Button fx:id="reload_game" layoutX="317.0" layoutY="425.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#reloadGame" prefHeight="39.0" prefWidth="165.0" text="Reiniciar Juego" />
-      <Button fx:id="randon_pokemons_buttons" layoutX="288.0" layoutY="310.0" mnemonicParsing="false" onAction="#selectRandomPokemons" prefHeight="53.0" prefWidth="222.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Elige tu pokemon" />
       <Label fx:id="player_name" layoutX="95.0" layoutY="325.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="PLAYER" />
       <Label fx:id="enemy_name" layoutX="658.0" layoutY="325.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="ENEMY" />
       <Button fx:id="similarDetails_1" layoutX="632.0" layoutY="156.0" mnemonicParsing="false" onAction="#similarDetails1" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
@@ -189,5 +187,7 @@
             <Image url="@IMG_20230329_084843.png" />
          </image>
       </ImageView>
+      <Button fx:id="randon_pokemons_buttons" layoutX="288.0" layoutY="310.0" mnemonicParsing="false" onAction="#selectRandomPokemons" prefHeight="53.0" prefWidth="222.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Elige tu pokemon" />
+      <Label fx:id="label_evoluciones" layoutX="353.0" layoutY="307.0" text="Evoluciones:" visible="false" />
    </children>
 </AnchorPane>

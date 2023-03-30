@@ -199,6 +199,8 @@ public class HelloController {
 
     @FXML
     private ImageView img_backgroud_2_2;
+    @FXML
+    private Label label_evoluciones;
 
     //------------------Methods--------------------------------
 
@@ -265,6 +267,8 @@ public class HelloController {
         similarDetails_2.setVisible(true);
         similarDetails_3.setVisible(true);
 
+        label_evoluciones.setVisible(true);
+
         buttonBattle.setVisible(false);
 
         //Button of back to the view one
@@ -284,7 +288,7 @@ public class HelloController {
         //setting the images to the ImagesViews
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(0)))));
         imagen_1.setImage(imagen1);
-        /*
+
         Image imagen2 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(1)))));
         imagen_2.setImage(imagen2);
 
@@ -304,7 +308,7 @@ public class HelloController {
         imagen_7.setImage(imagen7);
 
         Image imagen8 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(7)))));
-        imagen_8.setImage(imagen8);*/
+        imagen_8.setImage(imagen8);
 
         //-----------------------------------------------------------
 
@@ -430,6 +434,8 @@ public class HelloController {
         similarDetails_2.setVisible(false);
         similarDetails_3.setVisible(false);
 
+        label_evoluciones.setVisible(false);
+
         //--------
         //Button to go to the view submit
         button_add_pokemon.setVisible(true);
@@ -467,6 +473,10 @@ public class HelloController {
         buttonBattle.setVisible(false);
         search_button.setVisible(false);
         searchText.setVisible(false);
+
+        //img for background
+        img_backgroud_2_1.setVisible(false);
+        img_backgroud_2_2.setVisible(false);
 
         img_tittle.setVisible(true);
         button_tittle.setVisible(true);

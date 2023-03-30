@@ -44,7 +44,7 @@ public class PokemonsDAO {
                         "\nCategoria: " + rs.getString("category") +
                         "\nElemento: " + rs.getString("element") +
                         "\nEvolucion 1: " + rs.getString("evolution_1") +
-                        "\nEvolucion 2" + rs.getString("evolution_2") +
+                        "\nEvolucion 2: " + rs.getString("evolution_2") +
                         "\nTipo de pokebola: " + rs.getString("pokeball_type") +
                         "\nDescripcion: " +  rs.getString("description"));
 
