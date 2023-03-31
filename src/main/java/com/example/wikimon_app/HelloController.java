@@ -193,10 +193,6 @@ public class HelloController {
 
     @FXML
     private ImageView img_tittle;
-
-    @FXML
-    private ImageView img_backgroud_2_1;
-
     @FXML
     private ImageView img_backgroud_2_2;
     @FXML
@@ -282,6 +278,13 @@ public class HelloController {
     @FXML
     void goToViewTwo(ActionEvent event) {
 
+        Collections.shuffle(randomIndex);
+        System.out.println("Lista desordenada");
+        System.out.println(randomIndex);
+
+        System.out.println("Ids");
+        System.out.println(PokemonsDAO.ids);
+
         if (randomIndex.size() <= 0) {
             pokemonImages();
         }
@@ -337,8 +340,7 @@ public class HelloController {
         imagen_8.setVisible(true);
 
         //images for backgroud
-        img_backgroud_2_1.setVisible(true);
-        img_backgroud_2_2.setVisible(true);
+        //img_backgroud_2_2.setVisible(true);--------------------
 
         button_add_pokemon.setVisible(true);
 
@@ -475,8 +477,7 @@ public class HelloController {
         searchText.setVisible(false);
 
         //img for background
-        img_backgroud_2_1.setVisible(false);
-        img_backgroud_2_2.setVisible(false);
+        //img_backgroud_2_2.setVisible(false);
 
         img_tittle.setVisible(true);
         button_tittle.setVisible(true);
@@ -511,11 +512,11 @@ public class HelloController {
     }
 
     @FXML
-    void selectRandomPokemons(){
+    void selectRandomPokemons() {
         imagesForBattles();
     }
 
-    public void pokemonImages(){
+    public void pokemonImages() {
         //we call to the method that will pull the information from the BBDD
         //conditional to check if the method is already called
         if (ejecucionRead == false) {
@@ -528,12 +529,7 @@ public class HelloController {
 
         //pokemons that will be in the ImageViews
 
-        Collections.shuffle(randomIndex);
-        System.out.println("Lista desordenada");
-        System.out.println(randomIndex);
 
-        System.out.println("Ids");
-        System.out.println(PokemonsDAO.ids);
     }
 
 
@@ -546,8 +542,8 @@ public class HelloController {
         int randomNumberToIndex = randomNumber(randomIndex.size() - 1);
         int randomNumberToIndexEnemy = randomNumber(randomIndex.size() - 4);
 
-        if (randomNumberToIndexEnemy == randomNumberToIndex){
-            randomNumberToIndexEnemy = randomNumber(randomIndex.size() -2);
+        if (randomNumberToIndexEnemy == randomNumberToIndex) {
+            randomNumberToIndexEnemy = randomNumber(randomIndex.size() - 2);
         }
 
         player_name.setText(PokemonsDAO.names.get(randomNumberToIndex));
@@ -872,7 +868,7 @@ public class HelloController {
     private Button similarDetails_3;
 
     @FXML
-    void similarDetails1(ActionEvent event){
+    void similarDetails1(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(similar_details1)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(similar_details1)))));
@@ -899,8 +895,9 @@ public class HelloController {
         similar_details2 = 7;
         similar_details3 = 1;
     }
+
     @FXML
-    void similarDetails2(ActionEvent event){
+    void similarDetails2(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(similar_details2)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(similar_details2)))));
@@ -927,8 +924,9 @@ public class HelloController {
         similar_details2 = 3;
         similar_details3 = 6;
     }
+
     @FXML
-    void similarDetails3(ActionEvent event){
+    void similarDetails3(ActionEvent event) {
         goToViewTree();
         text_name.setText(PokemonsDAO.names.get(randomIndex.get(similar_details3)));
         Image imagen1 = new Image(String.valueOf(new File(PokemonsDAO.image_routes.get(randomIndex.get(similar_details3)))));
@@ -1043,7 +1041,7 @@ public class HelloController {
     String battle_enemy;
 
 
-    public String playBattle(String player_attack){
+    public String playBattle(String player_attack) {
         String resultado;
         //a new battle starts every time the user press the button play
         //when the lives of any one of the opponents is on 0 the button play is disabled
@@ -1051,25 +1049,25 @@ public class HelloController {
 
         //set the variables in the text squares
 
-        if (player_attack == enemy_attack){
+        if (player_attack == enemy_attack) {
             //tie
             resultado = "Empate";
-        }else if (player_attack == "water" && enemy_attack == "ray") {
+        } else if (player_attack == "water" && enemy_attack == "ray") {
             //you lose
             resultado = "Perdiste";
-            player_lives --;
-        }else if (player_attack == "fire" && enemy_attack == "water") {
+            player_lives--;
+        } else if (player_attack == "fire" && enemy_attack == "water") {
             //you lose
             resultado = "Perdiste";
-            player_lives --;
-        }else if (player_attack == "ray" && enemy_attack == "fire") {
+            player_lives--;
+        } else if (player_attack == "ray" && enemy_attack == "fire") {
             //you lose
             resultado = "Perdiste";
-            player_lives --;
-        }else {
+            player_lives--;
+        } else {
             //you win
             resultado = "Ganaste";
-            enemy_lives --;
+            enemy_lives--;
         }
 
         battle_player = player_attack;
@@ -1102,31 +1100,34 @@ public class HelloController {
         player_lives = 3;
         enemy_lives = 3;
     }
+
     @FXML
-    void buttonWater(ActionEvent event){
+    void buttonWater(ActionEvent event) {
         battle1 = playBattle("water");
         text_player1.setText(battle_player);
         text_enemy1.setText(battle_enemy);
         text_result1.setText(battle1);
     }
+
     @FXML
-    void buttonRay(ActionEvent event){
+    void buttonRay(ActionEvent event) {
         battle1 = playBattle("ray");
         text_player2.setText(battle_player);
         text_enemy2.setText(battle_enemy);
         text_result2.setText(battle1);
     }
+
     @FXML
-    void buttonFire(ActionEvent event){
+    void buttonFire(ActionEvent event) {
         battle1 = playBattle("water");
         text_player3.setText(battle_player);
         text_enemy3.setText(battle_enemy);
         text_result3.setText(battle1);
     }
 
-    public String enemyAttack(){
+    public String enemyAttack() {
         int randomnumber = randomNumber(3);
-        switch (randomnumber){
+        switch (randomnumber) {
             case 1:
                 enemy_attack = "water";
                 break;
@@ -1139,8 +1140,8 @@ public class HelloController {
         return enemy_attack;
     }
 
-    public void checkLives(){
-        if (enemy_lives <= 0){
+    public void checkLives() {
+        if (enemy_lives <= 0) {
             //tie
             //set the victory in the result text
             text_result_final.setText("GANASTE");
@@ -1153,7 +1154,7 @@ public class HelloController {
 
             reload_game.setVisible(true);
 
-        }else if (player_lives <= 0){
+        } else if (player_lives <= 0) {
             //you lose
             //set the defeat in the result text
             text_result_final.setText("PERDISTE");
@@ -1167,8 +1168,9 @@ public class HelloController {
             reload_game.setVisible(true);
         }
     }
-    public int randomNumber(int range){
-        int numero = (int)(Math.random()*range+1);
+
+    public int randomNumber(int range) {
+        int numero = (int) (Math.random() * range + 1);
         return numero;
     }
 }
