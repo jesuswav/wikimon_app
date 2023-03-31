@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.File;
 import java.sql.Connection;
@@ -27,36 +28,6 @@ public class HelloController {
 
     //Search button and TextField
 
-    @FXML
-    private Button search_button;
-    @FXML
-    private TextField searchText;
-
-    //Buttons of vista1
-    @FXML
-    private Button button_1;
-    @FXML
-    private Button button_2;
-    @FXML
-    private Button button_3;
-    @FXML
-    private Button button_4;
-    @FXML
-    private Button button_5;
-    @FXML
-    private Button button_6;
-    @FXML
-    private Button button_7;
-    @FXML
-    private Button button_8;
-
-    //Buttons of view two
-    @FXML
-    private Button buttonBack;
-
-    @FXML
-    private Button buttonBattle;
-
     //Imagenes de la vista_1 ---------------------
     @FXML
     private ImageView imagen_1;
@@ -74,22 +45,6 @@ public class HelloController {
     private ImageView imagen_7;
     @FXML
     private ImageView imagen_8;
-
-
-    //-------------------------------
-    //Labels of information that comes from BBDD
-    @FXML
-    private Label label_category;
-    @FXML
-    private Label label_element;
-    @FXML
-    private Label label_heigth;
-    @FXML
-    private Label label_name;
-    @FXML
-    private Label label_pokeball;
-    @FXML
-    private Label label_wigth;
 
     //Image of the pokemon in the detailed view
     @FXML
@@ -120,9 +75,6 @@ public class HelloController {
     //TextArea and label for the description of the pokemon
     @FXML
     private TextArea text_area_descripcion;
-    @FXML
-    private Label label_descripcion;
-
     //ImageView for evolutions of the pokemon
     @FXML
     private ImageView img_evolucion1;
@@ -131,27 +83,7 @@ public class HelloController {
 
     //------------------------view submit ----------------------------------------------------------
     @FXML
-    private Button button_submit;
-    @FXML
-    private Label label_description_send;
-    @FXML
     private Label label_element_send;
-    @FXML
-    private Label label_evo1_send;
-    @FXML
-    private Label label_evo2_send;
-    @FXML
-    private Label label_height_send;
-    @FXML
-    private Label label_image_send;
-    @FXML
-    private Label label_name_send;
-    @FXML
-    private Label label_pokeball_send;
-    @FXML
-    private Label label_weight_send;
-    @FXML
-    private Label label_category_send;
     @FXML
     private TextField text_category_send;
     @FXML
@@ -173,10 +105,6 @@ public class HelloController {
     @FXML
     private TextArea text_area_description_send;
     @FXML
-    private Button button_add_pokemon;
-    @FXML
-    private Button randon_pokemons_buttons;
-    @FXML
     private Label player_name;
     @FXML
     private Label enemy_name;
@@ -187,16 +115,15 @@ public class HelloController {
     @FXML
     private Button button_tittle;
 
-    //Tittle of the first view
+    //Objects for the views
     @FXML
-    private Label label_tittle;
-
+    private AnchorPane view_two_details;
     @FXML
-    private ImageView img_tittle;
+    private AnchorPane view_one_battle;
     @FXML
-    private ImageView img_backgroud_2_2;
+    private AnchorPane view_three_details;
     @FXML
-    private Label label_evoluciones;
+    private AnchorPane view_four_register;
 
     //------------------Methods--------------------------------
 
@@ -207,70 +134,11 @@ public class HelloController {
         view_two = false;
         view_three = true;
 
-        //---------------------------buttons visible of view one----------------------------
-        //We make the buttons of view_2 invisible
-        button_1.setVisible(false);
-        button_2.setVisible(false);
-        button_3.setVisible(false);
-        button_4.setVisible(false);
-        button_5.setVisible(false);
-        button_6.setVisible(false);
-        button_7.setVisible(false);
-        button_8.setVisible(false);
+        view_one_battle.setVisible(false);
+        view_two_details.setVisible(false);
+        view_three_details.setVisible(true);
+        view_four_register.setVisible(false);
 
-        //We make the images of view_1 invisible
-        imagen_1.setVisible(false);
-        imagen_2.setVisible(false);
-        imagen_3.setVisible(false);
-        imagen_4.setVisible(false);
-        imagen_5.setVisible(false);
-        imagen_6.setVisible(false);
-        imagen_7.setVisible(false);
-        imagen_8.setVisible(false);
-
-
-        //---------------------elements of view3 visible------------------------
-        //We make the labels of view_2 visible
-        label_name.setVisible(true);
-        label_wigth.setVisible(true);
-        label_heigth.setVisible(true);
-        label_category.setVisible(true);
-        label_element.setVisible(true);
-        label_pokeball.setVisible(true);
-
-        //We make the TextFields of view_3 visible
-        text_name.setVisible(true);
-        text_weigth.setVisible(true);
-        text_heigth.setVisible(true);
-        text_category.setVisible(true);
-        text_element.setVisible(true);
-        text_pokeball.setVisible(true);
-
-        pokemon_image.setVisible(true);
-
-        //modifications of the visible property for the last objects of view3
-        similar_pokemon1.setVisible(true);
-        similar_pokemon2.setVisible(true);
-        similar_pokemon3.setVisible(true);
-
-        text_area_descripcion.setVisible(true);
-
-        img_evolucion1.setVisible(true);
-        img_evolucion2.setVisible(true);
-        label_descripcion.setVisible(true);
-
-        similarDetails_1.setVisible(true);
-        similarDetails_2.setVisible(true);
-        similarDetails_3.setVisible(true);
-
-        label_evoluciones.setVisible(true);
-
-        buttonBattle.setVisible(false);
-
-        //Button of back to the view one
-        if (view_three == true) {
-            buttonBack.setVisible(true);
-        }
     }
 
     boolean ejecucionRead = false;
@@ -319,194 +187,20 @@ public class HelloController {
         view_two = true;
         view_three = false;
 
-        //We make the buttons of the view1 visible again
-        button_1.setVisible(true);
-        button_2.setVisible(true);
-        button_3.setVisible(true);
-        button_4.setVisible(true);
-        button_5.setVisible(true);
-        button_6.setVisible(true);
-        button_7.setVisible(true);
-        button_8.setVisible(true);
+        view_one_battle.setVisible(false);
+        view_two_details.setVisible(true);
+        view_three_details.setVisible(false);
+        view_four_register.setVisible(false);
 
-        //We make the images of the view1 visible again
-        imagen_1.setVisible(true);
-        imagen_2.setVisible(true);
-        imagen_3.setVisible(true);
-        imagen_4.setVisible(true);
-        imagen_5.setVisible(true);
-        imagen_6.setVisible(true);
-        imagen_7.setVisible(true);
-        imagen_8.setVisible(true);
-
-        //images for backgroud
-        //img_backgroud_2_2.setVisible(true);--------------------
-
-        button_add_pokemon.setVisible(true);
-
-        //we make insisible the labels of view2 again
-        label_name.setVisible(false);
-        label_wigth.setVisible(false);
-        label_heigth.setVisible(false);
-        label_category.setVisible(false);
-        label_element.setVisible(false);
-        label_pokeball.setVisible(false);
-
-        //we make insisible the TextFields of view2 again
-        text_name.setVisible(false);
-        text_weigth.setVisible(false);
-        text_heigth.setVisible(false);
-        text_category.setVisible(false);
-        text_element.setVisible(false);
-        text_pokeball.setVisible(false);
-
-        //we make insisible the image of view2 of view2 again
-        pokemon_image.setVisible(false);
-
-        //we make the elements of the first view invisible
-        button_tittle.setVisible(false);
-        img_tittle.setVisible(false);
-
-        //we make visible the button of search and the TextField
-        search_button.setVisible(true);
-        searchText.setVisible(true);
-
-        //modifications of the visible property for the last objects of view3
-        similar_pokemon1.setVisible(false);
-        similar_pokemon2.setVisible(false);
-        similar_pokemon3.setVisible(false);
-
-        text_area_descripcion.setVisible(false);
-        label_descripcion.setVisible(false);
-
-        img_evolucion1.setVisible(false);
-        img_evolucion2.setVisible(false);
-
-        //we make invisible the view submit
-        button_submit.setVisible(false);
-        label_description_send.setVisible(false);
-        label_element_send.setVisible(false);
-        label_evo1_send.setVisible(false);
-        label_evo2_send.setVisible(false);
-        label_height_send.setVisible(false);
-        label_image_send.setVisible(false);
-        label_name_send.setVisible(false);
-        label_pokeball_send.setVisible(false);
-        label_weight_send.setVisible(false);
-        label_category_send.setVisible(false);
-        text_category_send.setVisible(false);
-        text_area_description_send.setVisible(false);
-        text_element_send.setVisible(false);
-        text_evo1_send.setVisible(false);
-        text_evo2_send.setVisible(false);
-        text_height_send.setVisible(false);
-        text_image_send.setVisible(false);
-        text_name_send.setVisible(false);
-        text_pokeball_send.setVisible(false);
-        text_weight_send.setVisible(false);
-
-        //buttons of the view battle
-        text_result1.setVisible(false);
-        text_result2.setVisible(false);
-        text_result3.setVisible(false);
-        text_result_final.setVisible(false);
-        text_player1.setVisible(false);
-        text_player1.setVisible(false);
-        text_player2.setVisible(false);
-        text_player3.setVisible(false);
-        text_enemy1.setVisible(false);
-        text_enemy2.setVisible(false);
-        text_enemy3.setVisible(false);
-        label_result.setVisible(false);
-        label_attack1.setVisible(false);
-        label_attack2.setVisible(false);
-        image_enemy.setVisible(false);
-        image_player.setVisible(false);
-        fire_button.setVisible(false);
-        water_button.setVisible(false);
-        ray_button.setVisible(false);
-
-        randon_pokemons_buttons.setVisible(false);
-        reload_game.setVisible(false);
-
-        player_name.setVisible(false);
-        enemy_name.setVisible(false);
-
-        similarDetails_1.setVisible(false);
-        similarDetails_2.setVisible(false);
-        similarDetails_3.setVisible(false);
-
-        label_evoluciones.setVisible(false);
-
-        //--------
-        //Button to go to the view submit
-        button_add_pokemon.setVisible(true);
-        buttonBattle.setVisible(true);
-
-        buttonBack.setVisible(false);
-        ejecucionRead = true;
     }
 
     @FXML
     void goToViewBattle(ActionEvent event) {
-        //We make the buttons of the view1 visible again
-        button_1.setVisible(false);
-        button_2.setVisible(false);
-        button_3.setVisible(false);
-        button_4.setVisible(false);
-        button_5.setVisible(false);
-        button_6.setVisible(false);
-        button_7.setVisible(false);
-        button_8.setVisible(false);
 
-        //We make the images of the view1 visible again
-        imagen_1.setVisible(false);
-        imagen_2.setVisible(false);
-        imagen_3.setVisible(false);
-        imagen_4.setVisible(false);
-        imagen_5.setVisible(false);
-        imagen_6.setVisible(false);
-        imagen_7.setVisible(false);
-        imagen_8.setVisible(false);
-
-        button_add_pokemon.setVisible(false);
-
-        button_add_pokemon.setVisible(false);
-        buttonBattle.setVisible(false);
-        search_button.setVisible(false);
-        searchText.setVisible(false);
-
-        //img for background
-        //img_backgroud_2_2.setVisible(false);
-
-        img_tittle.setVisible(true);
-        button_tittle.setVisible(true);
-
-        text_result1.setVisible(true);
-        text_result2.setVisible(true);
-        text_result3.setVisible(true);
-        text_result_final.setVisible(true);
-        text_player1.setVisible(true);
-        text_player1.setVisible(true);
-        text_player2.setVisible(true);
-        text_player3.setVisible(true);
-        text_enemy1.setVisible(true);
-        text_enemy2.setVisible(true);
-        text_enemy3.setVisible(true);
-        label_result.setVisible(true);
-        label_attack1.setVisible(true);
-        label_attack2.setVisible(true);
-        image_enemy.setVisible(true);
-        image_player.setVisible(true);
-        fire_button.setVisible(true);
-        water_button.setVisible(true);
-        ray_button.setVisible(true);
-
-        player_name.setVisible(true);
-        enemy_name.setVisible(true);
-
-        randon_pokemons_buttons.setVisible(true);
-        reload_game.setVisible(true);
+        view_one_battle.setVisible(true);
+        view_two_details.setVisible(false);
+        view_three_details.setVisible(false);
+        view_four_register.setVisible(false);
 
         imagesForBattles();
     }
@@ -569,56 +263,10 @@ public class HelloController {
     @FXML
     void goToViewSubmit(ActionEvent event) {
 
-        //we make visible the elements of view submit
-        button_submit.setVisible(true);
-        label_description_send.setVisible(true);
-        label_element_send.setVisible(true);
-        label_evo1_send.setVisible(true);
-        label_evo2_send.setVisible(true);
-        label_height_send.setVisible(true);
-        label_image_send.setVisible(true);
-        label_name_send.setVisible(true);
-        label_pokeball_send.setVisible(true);
-        label_weight_send.setVisible(true);
-        label_category_send.setVisible(true);
-        text_category_send.setVisible(true);
-        text_area_description_send.setVisible(true);
-        text_element_send.setVisible(true);
-        text_evo1_send.setVisible(true);
-        text_evo2_send.setVisible(true);
-        text_height_send.setVisible(true);
-        text_image_send.setVisible(true);
-        text_name_send.setVisible(true);
-        text_pokeball_send.setVisible(true);
-        text_weight_send.setVisible(true);
-
-        search_button.setVisible(true);
-        searchText.setVisible(true);
-
-        buttonBack.setVisible(true);
-
-        //---------------------------view two invisible--------------------------
-        //We make the buttons of the view1 visible again
-        button_1.setVisible(false);
-        button_2.setVisible(false);
-        button_3.setVisible(false);
-        button_4.setVisible(false);
-        button_5.setVisible(false);
-        button_6.setVisible(false);
-        button_7.setVisible(false);
-        button_8.setVisible(false);
-
-        //We make the images of the view1 visible again
-        imagen_1.setVisible(false);
-        imagen_2.setVisible(false);
-        imagen_3.setVisible(false);
-        imagen_4.setVisible(false);
-        imagen_5.setVisible(false);
-        imagen_6.setVisible(false);
-        imagen_7.setVisible(false);
-        imagen_8.setVisible(false);
-
-        buttonBattle.setVisible(false);
+        view_one_battle.setVisible(false);
+        view_two_details.setVisible(false);
+        view_three_details.setVisible(false);
+        view_four_register.setVisible(true);
 
     }
 

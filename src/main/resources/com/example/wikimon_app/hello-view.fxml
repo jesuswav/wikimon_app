@@ -11,12 +11,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="789.0" style="-fx-background-color: #EAEAEA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wikimon_app.HelloController">
    <children>
-      <ImageView fx:id="img_backgroud_2_2" fitHeight="483.0" fitWidth="935.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="img_backgroud_2_2" fitHeight="483.0" fitWidth="935.0" layoutX="-36.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pokemonbackgroundblurr.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="24.0" layoutY="3.0" visible="false">
+      <AnchorPane fx:id="view_two_details" layoutX="24.0" layoutY="3.0" visible="false">
          <children>
             <ImageView fx:id="imagen_1" fitHeight="153.0" fitWidth="165.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -69,27 +69,99 @@
             <TextField fx:id="searchText" layoutX="522.0" layoutY="1.0" />
             <Button fx:id="search_button" layoutX="678.0" mnemonicParsing="false" onAction="#showPokemon" prefHeight="25.0" prefWidth="66.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: EFD626; -fx-text-fill: #ffffff;" text="Buscar" />
             <Button fx:id="buttonBattle" layoutY="1.0" mnemonicParsing="false" onAction="#goToViewBattle" style="-fx-background-color: #ffffff; -fx-font-family: &quot;OCR A Extended&quot;;" text="Go to battle!" />
-            <Button fx:id="button_add_pokemon" mnemonicParsing="false" onAction="#goToViewSubmit" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #ffffff;" text="Agregar pokemon" visible="false" />
+            <Button fx:id="button_add_pokemon" layoutX="389.0" layoutY="3.0" mnemonicParsing="false" onAction="#goToViewSubmit" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #ffffff;" text="Agregar pokemon" />
          </children>
       </AnchorPane>
-      <ImageView fx:id="pokemon_image" fitHeight="257.0" fitWidth="280.0" layoutX="33.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@noImage.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="label_name" layoutX="345.0" layoutY="64.0" text="Nombre:" visible="false" />
-      <Label fx:id="label_wigth" layoutX="359.0" layoutY="100.0" text="Peso:" visible="false" />
-      <Label fx:id="label_heigth" layoutX="355.0" layoutY="137.0" text="Altura:" visible="false" />
-      <Label fx:id="label_category" layoutX="339.0" layoutY="175.0" text="Categoria:" visible="false" />
-      <Label fx:id="label_element" layoutX="340.0" layoutY="212.0" text="Elemento:" visible="false" />
-      <Label fx:id="label_pokeball" layoutX="340.0" layoutY="249.0" text="Pokebola:" visible="false" />
-      <TextField fx:id="text_name" layoutX="396.0" layoutY="60.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
-      <TextField fx:id="text_weigth" layoutX="396.0" layoutY="96.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
-      <TextField fx:id="text_heigth" layoutX="396.0" layoutY="133.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
-      <TextField fx:id="text_category" layoutX="396.0" layoutY="171.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
-      <TextField fx:id="text_element" layoutX="396.0" layoutY="208.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
-      <TextField fx:id="text_pokeball" layoutX="396.0" layoutY="245.0" prefHeight="25.0" prefWidth="186.0" visible="false" />
-      <AnchorPane layoutX="28.0" layoutY="2.0">
+      <AnchorPane fx:id="view_four_register" layoutX="14.0" layoutY="6.0" prefHeight="435.0" prefWidth="744.0" visible="false">
+         <children>
+            <Button fx:id="buttonBack11" mnemonicParsing="false" onAction="#goToViewTwo" style="-fx-background-color: #ffffff;" text="Go to DataBase">
+               <font>
+                  <Font name="OCR A Extended" size="12.0" />
+               </font>
+            </Button>
+      
+                  <Label fx:id="label_name_send" layoutX="264.0" layoutY="31.0" text="Nombre:" />
+            <Label fx:id="label_image_send" layoutX="268.0" layoutY="63.0" text="Imagen:" />
+            <Label fx:id="label_weight_send" layoutX="282.0" layoutY="99.0" text="Peso:" />
+            <Label fx:id="label_height_send" layoutX="273.0" layoutY="135.0" text="Altura:" />
+            <Label fx:id="label_category_send" layoutX="257.0" layoutY="166.0" text="Categoria:" />
+            <Label fx:id="label_evo1_send" layoutX="247.0" layoutY="232.0" text="Evolucion 1:" />
+            <Label fx:id="label_evo2_send" layoutX="247.0" layoutY="263.0" text="Evolucion 2:" />
+            <Label fx:id="label_pokeball_send" layoutX="214.0" layoutY="296.0" text="Tipo de pokebola:" />
+            <Label fx:id="label_description_send" layoutX="246.0" layoutY="328.0" text="Descripcion:" />
+            <TextField fx:id="text_name_send" layoutX="314.0" layoutY="27.0" />
+            <TextField fx:id="text_image_send" layoutX="314.0" layoutY="59.0" />
+            <TextField fx:id="text_weight_send" layoutX="314.0" layoutY="95.0" />
+            <TextField fx:id="text_height_send" layoutX="314.0" layoutY="131.0" />
+            <TextField fx:id="text_category_send" layoutX="314.0" layoutY="162.0" />
+            <TextField fx:id="text_element_send" layoutX="314.0" layoutY="196.0" />
+            <TextField fx:id="text_evo1_send" layoutX="314.0" layoutY="228.0" />
+            <TextField fx:id="text_evo2_send" layoutX="314.0" layoutY="259.0" />
+            <TextField fx:id="text_pokeball_send" layoutX="314.0" layoutY="292.0" />
+            <Label fx:id="label_element_send" layoutX="258.0" layoutY="200.0" text="Elemento:" />
+            <Button fx:id="button_submit" layoutX="483.0" layoutY="284.0" mnemonicParsing="false" onAction="#buttonSubmit" text="Enviar" />
+            <TextArea fx:id="text_area_description_send" layoutX="314.0" layoutY="329.0" prefHeight="80.0" prefWidth="207.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="view_three_details" layoutX="24.0" layoutY="4.0" visible="false">
+         <children>
+            <ImageView fx:id="pokemon_image" fitHeight="257.0" fitWidth="280.0" layoutX="9.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noImage.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="label_name" layoutX="321.0" layoutY="60.0" text="Nombre:" />
+            <Label fx:id="label_wigth" layoutX="335.0" layoutY="96.0" text="Peso:" />
+            <Label fx:id="label_heigth" layoutX="331.0" layoutY="133.0" text="Altura:" />
+            <Label fx:id="label_category" layoutX="315.0" layoutY="171.0" text="Categoria:" />
+            <Label fx:id="label_element" layoutX="316.0" layoutY="208.0" text="Elemento:" />
+            <Label fx:id="label_pokeball" layoutX="316.0" layoutY="245.0" text="Pokebola:" />
+            <TextField fx:id="text_name" layoutX="372.0" layoutY="56.0" prefHeight="25.0" prefWidth="186.0" />
+            <TextField fx:id="text_weigth" layoutX="372.0" layoutY="92.0" prefHeight="25.0" prefWidth="186.0" />
+            <TextField fx:id="text_heigth" layoutX="372.0" layoutY="129.0" prefHeight="25.0" prefWidth="186.0" />
+            <TextField fx:id="text_category" layoutX="372.0" layoutY="167.0" prefHeight="25.0" prefWidth="186.0" />
+            <TextField fx:id="text_element" layoutX="372.0" layoutY="204.0" prefHeight="25.0" prefWidth="186.0" />
+            <TextField fx:id="text_pokeball" layoutX="372.0" layoutY="241.0" prefHeight="25.0" prefWidth="186.0" />
+            <Button fx:id="buttonBack" mnemonicParsing="false" onAction="#goToViewTwo" style="-fx-background-color: #ffffff;" text="Go to DataBase">
+               <font>
+                  <Font name="OCR A Extended" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="img_evolucion1" fitHeight="103.0" fitWidth="103.0" layoutX="336.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noImage.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_evolucion2" fitHeight="103.0" fitWidth="113.0" layoutX="473.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noImage.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="similar_pokemon1" fitHeight="116.0" fitWidth="116.0" layoutX="608.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noImage.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="similar_pokemon2" fitHeight="116.0" fitWidth="116.0" layoutX="608.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noImage.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="similar_pokemon3" fitHeight="116.0" fitWidth="116.0" layoutX="608.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noImage.png" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="text_area_descripcion" layoutX="11.0" layoutY="324.0" prefHeight="124.0" prefWidth="257.0" />
+            <Button fx:id="similarDetails_2" layoutX="608.0" layoutY="293.0" mnemonicParsing="false" onAction="#similarDetails2" prefHeight="25.0" prefWidth="116.0" text="Detalles" />
+            <Label fx:id="label_descripcion" layoutX="11.0" layoutY="299.0" prefHeight="0.0" prefWidth="65.0" text="Descripción:" />
+            <Label layoutX="644.0" layoutY="20.0" text="Similares:" />
+            <Button fx:id="similarDetails_1" layoutX="608.0" layoutY="152.0" mnemonicParsing="false" onAction="#similarDetails1" prefHeight="25.0" prefWidth="116.0" text="Detalles" />
+            <Button fx:id="similarDetails_3" layoutX="608.0" layoutY="429.0" mnemonicParsing="false" onAction="#similarDetails3" prefHeight="25.0" prefWidth="116.0" text="Detalles" />
+            <Label fx:id="label_evoluciones" layoutX="422.0" layoutY="306.0" text="Evoluciones:" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="view_one_battle" layoutX="28.0" layoutY="2.0">
          <children>
             <Button fx:id="button_tittle" defaultButton="true" layoutX="510.0" layoutY="18.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="142.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Base de Pokemones" />
       
@@ -127,74 +199,16 @@
             <TextField fx:id="text_result_final" alignment="CENTER" editable="false" layoutX="295.0" layoutY="369.0" prefHeight="46.0" prefWidth="153.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Resultado" />
             <Button fx:id="ray_button" layoutX="303.0" layoutY="94.0" mnemonicParsing="false" onAction="#buttonRay" prefHeight="46.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Rayo" />
             <Button fx:id="fire_button" layoutX="434.0" layoutY="94.0" mnemonicParsing="false" onAction="#buttonFire" prefHeight="46.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Fuego" />
-            <Button fx:id="reload_game" layoutX="454.0" layoutY="423.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#reloadGame" prefHeight="39.0" prefWidth="165.0" text="Reiniciar Juego" />
+            <Button fx:id="reload_game" layoutX="295.0" layoutY="422.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#reloadGame" prefHeight="33.0" prefWidth="153.0" text="Reiniciar Juego" />
             <ImageView fx:id="img_tittle" fitHeight="116.0" fitWidth="196.0" layoutX="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@IMG_20230329_084843.png" />
                </image>
             </ImageView>
             <Button fx:id="randon_pokemons_buttons" layoutX="260.0" layoutY="308.0" mnemonicParsing="false" onAction="#selectRandomPokemons" prefHeight="53.0" prefWidth="222.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Elige tu pokemon" />
-            <Label fx:id="player_name" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="PLAYER" />
-            <Label fx:id="enemy_name" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="ENEMY" />
+            <Label fx:id="player_name" layoutX="61.0" layoutY="317.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="PLAYER" />
+            <Label fx:id="enemy_name" layoutX="629.0" layoutY="317.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="ENEMY" />
          </children>
       </AnchorPane>
-      <Button fx:id="buttonBack" layoutX="24.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewTwo" style="-fx-background-color: #ffffff;" text="Go to DataBase" visible="false">
-         <font>
-            <Font name="OCR A Extended" size="12.0" />
-         </font></Button>
-      <ImageView fx:id="img_evolucion1" fitHeight="103.0" fitWidth="103.0" layoutX="360.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@noImage.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="img_evolucion2" fitHeight="103.0" fitWidth="113.0" layoutX="497.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@noImage.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="similar_pokemon1" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@noImage.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="similar_pokemon2" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@noImage.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="similar_pokemon3" fitHeight="116.0" fitWidth="116.0" layoutX="632.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@noImage.png" />
-         </image>
-      </ImageView>
-      <TextArea fx:id="text_area_descripcion" layoutX="35.0" layoutY="328.0" prefHeight="124.0" prefWidth="257.0" visible="false" />
-      <Label fx:id="label_descripcion" layoutX="35.0" layoutY="303.0" prefHeight="0.0" prefWidth="65.0" text="Descripción:" visible="false" />
-      <Label layoutX="668.0" layoutY="38.0" text="Similares:" visible="false" />
-
-      <Label fx:id="label_name_send" layoutX="295.0" layoutY="63.0" text="Nombre:" visible="false" />
-      <Label fx:id="label_image_send" layoutX="299.0" layoutY="95.0" text="Imagen:" visible="false" />
-      <Label fx:id="label_weight_send" layoutX="313.0" layoutY="131.0" text="Peso:" visible="false" />
-      <Label fx:id="label_height_send" layoutX="304.0" layoutY="167.0" text="Altura:" visible="false" />
-      <Label fx:id="label_category_send" layoutX="288.0" layoutY="198.0" text="Categoria:" visible="false" />
-      <Label fx:id="label_evo1_send" layoutX="278.0" layoutY="264.0" text="Evolucion 1:" visible="false" />
-      <Label fx:id="label_evo2_send" layoutX="278.0" layoutY="295.0" text="Evolucion 2:" visible="false" />
-      <Label fx:id="label_pokeball_send" layoutX="245.0" layoutY="328.0" text="Tipo de pokebola:" visible="false" />
-      <Label fx:id="label_description_send" layoutX="277.0" layoutY="360.0" text="Descripcion:" visible="false" />
-      <TextField fx:id="text_name_send" layoutX="345.0" layoutY="59.0" visible="false" />
-      <TextField fx:id="text_image_send" layoutX="345.0" layoutY="91.0" visible="false" />
-      <TextField fx:id="text_weight_send" layoutX="345.0" layoutY="127.0" visible="false" />
-      <TextField fx:id="text_height_send" layoutX="345.0" layoutY="163.0" visible="false" />
-      <TextField fx:id="text_category_send" layoutX="345.0" layoutY="194.0" visible="false" />
-      <TextField fx:id="text_element_send" layoutX="345.0" layoutY="228.0" visible="false" />
-      <TextField fx:id="text_evo1_send" layoutX="345.0" layoutY="260.0" visible="false" />
-      <TextField fx:id="text_evo2_send" layoutX="345.0" layoutY="291.0" visible="false" />
-      <TextField fx:id="text_pokeball_send" layoutX="345.0" layoutY="324.0" visible="false" />
-      <Label fx:id="label_element_send" layoutX="289.0" layoutY="232.0" text="Elemento:" visible="false" />
-      <Button fx:id="button_submit" layoutX="514.0" layoutY="316.0" mnemonicParsing="false" onAction="#buttonSubmit" text="Enviar" visible="false" />
-      <TextArea fx:id="text_area_description_send" layoutX="345.0" layoutY="361.0" prefHeight="80.0" prefWidth="207.0" visible="false" />
-      <Button fx:id="similarDetails_1" layoutX="632.0" layoutY="156.0" mnemonicParsing="false" onAction="#similarDetails1" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
-      <Button fx:id="similarDetails_2" layoutX="632.0" layoutY="293.0" mnemonicParsing="false" onAction="#similarDetails2" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
-      <Button fx:id="similarDetails_3" layoutX="632.0" layoutY="435.0" mnemonicParsing="false" onAction="#similarDetails3" prefHeight="25.0" prefWidth="116.0" text="Detalles" visible="false" />
-      <Label fx:id="label_evoluciones" layoutX="353.0" layoutY="307.0" text="Evoluciones:" visible="false" />
    </children>
 </AnchorPane>
