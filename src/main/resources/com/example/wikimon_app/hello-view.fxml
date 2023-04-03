@@ -105,7 +105,7 @@
             <Button fx:id="button_add_pokemon" layoutX="368.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewSubmit" prefHeight="33.0" prefWidth="135.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #83999E; -fx-border-radius: 20px;" text="Agregar pokemon" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="view_four_register" layoutX="14.0" layoutY="6.0" prefHeight="435.0" prefWidth="744.0" visible="false">
+      <AnchorPane fx:id="view_four_register" layoutX="14.0" layoutY="6.0" prefHeight="435.0" prefWidth="744.0">
          <children>
             <Button fx:id="buttonBack11" mnemonicParsing="false" onAction="#goToViewTwo" style="-fx-background-color: #ffffff;" text="Go to DataBase">
                <font>
@@ -113,30 +113,33 @@
                </font>
             </Button>
       
-                  <Label fx:id="label_name_send" layoutX="264.0" layoutY="31.0" text="Nombre:" />
-            <Label fx:id="label_image_send" layoutX="268.0" layoutY="63.0" text="Imagen:" />
-            <Label fx:id="label_weight_send" layoutX="282.0" layoutY="99.0" text="Peso:" />
-            <Label fx:id="label_height_send" layoutX="273.0" layoutY="135.0" text="Altura:" />
-            <Label fx:id="label_category_send" layoutX="257.0" layoutY="166.0" text="Categoria:" />
-            <Label fx:id="label_evo1_send" layoutX="247.0" layoutY="232.0" text="Evolucion 1:" />
-            <Label fx:id="label_evo2_send" layoutX="247.0" layoutY="263.0" text="Evolucion 2:" />
-            <Label fx:id="label_pokeball_send" layoutX="214.0" layoutY="296.0" text="Tipo de pokebola:" />
-            <Label fx:id="label_description_send" layoutX="246.0" layoutY="328.0" text="Descripcion:" />
-            <TextField fx:id="text_name_send" layoutX="314.0" layoutY="27.0" />
-            <TextField fx:id="text_image_send" layoutX="314.0" layoutY="59.0" />
-            <TextField fx:id="text_weight_send" layoutX="314.0" layoutY="95.0" />
-            <TextField fx:id="text_height_send" layoutX="314.0" layoutY="131.0" />
-            <TextField fx:id="text_category_send" layoutX="314.0" layoutY="162.0" />
-            <TextField fx:id="text_element_send" layoutX="314.0" layoutY="196.0" />
-            <TextField fx:id="text_evo1_send" layoutX="314.0" layoutY="228.0" />
-            <TextField fx:id="text_evo2_send" layoutX="314.0" layoutY="259.0" />
-            <TextField fx:id="text_pokeball_send" layoutX="314.0" layoutY="292.0" />
-            <Label fx:id="label_element_send" layoutX="258.0" layoutY="200.0" text="Elemento:" />
-            <Button fx:id="button_submit" layoutX="483.0" layoutY="284.0" mnemonicParsing="false" onAction="#buttonSubmit" text="Enviar" />
-            <TextArea fx:id="text_area_description_send" layoutX="314.0" layoutY="329.0" prefHeight="80.0" prefWidth="207.0" />
+                  <Label fx:id="label_name_send" layoutX="101.0" layoutY="43.0" style="-fx-font-size: 15px; -fx-font-family: &quot;OCR A Extended&quot;;" text="Nombre:">
+               <font>
+                  <Font name="OCR A Extended" size="12.0" />
+               </font></Label>
+            <Label fx:id="label_image_send" layoutX="435.0" layoutY="45.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Imagen:" />
+            <Label fx:id="label_weight_send" layoutX="101.0" layoutY="89.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Peso:" />
+            <Label fx:id="label_height_send" layoutX="434.0" layoutY="90.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Altura:" />
+            <Label fx:id="label_category_send" layoutX="100.0" layoutY="147.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Categoria:" />
+            <Label fx:id="label_evo1_send" layoutX="100.0" layoutY="201.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Evolucion 1:" />
+            <Label fx:id="label_evo2_send" layoutX="433.0" layoutY="201.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Evolucion 2:" />
+            <Label fx:id="label_pokeball_send" layoutX="102.0" layoutY="255.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Tipo de pokebola:" />
+            <Label fx:id="label_description_send" layoutX="434.0" layoutY="267.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Descripcion:" />
+            <TextField fx:id="text_name_send" layoutX="99.0" layoutY="61.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_image_send" layoutX="433.0" layoutY="61.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_weight_send" layoutX="100.0" layoutY="106.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_height_send" layoutX="433.0" layoutY="106.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_category_send" layoutX="100.0" layoutY="163.0" prefHeight="25.0" prefWidth="273.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_element_send" layoutX="431.0" layoutY="163.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_evo1_send" layoutX="99.0" layoutY="218.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_evo2_send" layoutX="432.0" layoutY="218.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_pokeball_send" layoutX="99.0" layoutY="272.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <Label fx:id="label_element_send" layoutX="433.0" layoutY="148.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Elemento:" />
+            <Button fx:id="button_submit" layoutX="496.0" layoutY="376.0" mnemonicParsing="false" onAction="#buttonSubmit" prefHeight="46.0" prefWidth="151.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #FBD24B; -fx-background-radius: 15px; -fx-text-fill: #ffffff; -fx-font-size: 20px;" text="Enviar" />
+            <TextArea fx:id="text_area_description_send" layoutX="435.0" layoutY="285.0" prefHeight="80.0" prefWidth="273.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="view_three_details" layoutX="24.0" layoutY="4.0">
+      <AnchorPane fx:id="view_three_details" layoutX="24.0" layoutY="4.0" visible="false">
          <children>
             <ImageView fx:id="pokemon_image" fitHeight="257.0" fitWidth="280.0" layoutX="9.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -149,12 +152,12 @@
             <Label fx:id="label_category" layoutX="297.0" layoutY="171.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Categoria:" />
             <Label fx:id="label_element" layoutX="304.0" layoutY="208.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Elemento:" />
             <Label fx:id="label_pokeball" layoutX="304.0" layoutY="246.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Pokebola:" />
-            <TextField fx:id="text_name" layoutX="372.0" layoutY="56.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
-            <TextField fx:id="text_weigth" layoutX="372.0" layoutY="92.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-color: #B4CBCA; -fx-border-radius: 10px;" />
-            <TextField fx:id="text_heigth" layoutX="372.0" layoutY="129.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
-            <TextField fx:id="text_category" layoutX="372.0" layoutY="167.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
-            <TextField fx:id="text_element" layoutX="372.0" layoutY="204.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
-            <TextField fx:id="text_pokeball" layoutX="372.0" layoutY="241.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_name" editable="false" layoutX="372.0" layoutY="56.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_weigth" editable="false" layoutX="372.0" layoutY="92.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-color: #B4CBCA; -fx-border-radius: 10px;" />
+            <TextField fx:id="text_heigth" editable="false" layoutX="372.0" layoutY="129.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_category" editable="false" layoutX="372.0" layoutY="167.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_element" editable="false" layoutX="372.0" layoutY="204.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
+            <TextField fx:id="text_pokeball" editable="false" layoutX="372.0" layoutY="241.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
             <Button fx:id="buttonBack" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="27.0" prefWidth="135.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 12px;" text="Go to DataBase">
                <font>
                   <Font name="OCR A Extended" size="12.0" />
@@ -185,12 +188,21 @@
                   <Image url="@noImage.png" />
                </image>
             </ImageView>
-            <TextArea fx:id="text_area_descripcion" layoutX="11.0" layoutY="324.0" prefHeight="124.0" prefWidth="257.0" />
-            <Button fx:id="similarDetails_2" layoutX="608.0" layoutY="293.0" mnemonicParsing="false" onAction="#similarDetails2" prefHeight="25.0" prefWidth="116.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-background-radius: 20px; -fx-text-fill: #ffffff; -fx-font-size: 15px;" text="Detalles" />
-            <Label fx:id="label_descripcion" layoutX="11.0" layoutY="308.0" prefHeight="14.0" prefWidth="103.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Descripción:" />
+            <TextArea fx:id="text_area_descripcion" editable="false" layoutX="11.0" layoutY="324.0" prefHeight="124.0" prefWidth="257.0" />
+            <Button fx:id="similarDetails_2" layoutX="608.0" layoutY="293.0" mnemonicParsing="false" onAction="#similarDetails2" prefHeight="25.0" prefWidth="116.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-background-radius: 20px; -fx-text-fill: #ffffff; -fx-font-size: 15px;" text="Detalles">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="label_descripcion" layoutX="11.0" layoutY="307.0" prefHeight="16.0" prefWidth="125.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Descripción:" />
             <Label layoutX="627.0" layoutY="23.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Similares:" />
-            <Button fx:id="similarDetails_1" layoutX="608.0" layoutY="152.0" mnemonicParsing="false" onAction="#similarDetails1" prefHeight="25.0" prefWidth="116.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-background-radius: 20px; -fx-text-fill: #ffffff; -fx-font-size: 15px;" text="Detalles" />
-            <Button fx:id="similarDetails_3" layoutX="608.0" layoutY="429.0" mnemonicParsing="false" onAction="#similarDetails3" prefHeight="25.0" prefWidth="116.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-background-radius: 20px; -fx-text-fill: #ffffff; -fx-font-size: 15px;" text="Detalles" />
+            <Button fx:id="similarDetails_1" layoutX="608.0" layoutY="152.0" mnemonicParsing="false" onAction="#similarDetails1" prefHeight="25.0" prefWidth="116.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-background-radius: 20px; -fx-text-fill: #ffffff; -fx-font-size: 15px;" text="Detalles">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="similarDetails_3" layoutX="608.0" layoutY="429.0" mnemonicParsing="false" onAction="#similarDetails3" prefHeight="25.0" prefWidth="116.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #3E82F0; -fx-background-radius: 20px; -fx-text-fill: #ffffff; -fx-font-size: 15px;" text="Detalles">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Label fx:id="label_evoluciones" layoutX="422.0" layoutY="306.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Evoluciones:" />
          </children>
       </AnchorPane>
