@@ -105,9 +105,9 @@
             <Button fx:id="button_add_pokemon" layoutX="368.0" layoutY="4.0" mnemonicParsing="false" onAction="#goToViewSubmit" prefHeight="33.0" prefWidth="135.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #83999E; -fx-border-radius: 20px;" text="Agregar pokemon" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="view_four_register" layoutX="14.0" layoutY="6.0" prefHeight="435.0" prefWidth="744.0">
+      <AnchorPane fx:id="view_four_register" layoutX="14.0" layoutY="6.0" prefHeight="435.0" prefWidth="744.0" visible="false">
          <children>
-            <Button fx:id="buttonBack11" mnemonicParsing="false" onAction="#goToViewTwo" style="-fx-background-color: #ffffff;" text="Go to DataBase">
+            <Button fx:id="buttonBack11" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="33.0" prefWidth="165.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15px; -fx-font-size: 15px; -fx-font-family: &quot;OCR A Extended&quot;;" text="Go to DataBase">
                <font>
                   <Font name="OCR A Extended" size="12.0" />
                </font>
@@ -135,8 +135,16 @@
             <TextField fx:id="text_evo2_send" layoutX="432.0" layoutY="218.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
             <TextField fx:id="text_pokeball_send" layoutX="99.0" layoutY="272.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #B4CBCA;" />
             <Label fx:id="label_element_send" layoutX="433.0" layoutY="148.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-font-size: 15px;" text="Elemento:" />
-            <Button fx:id="button_submit" layoutX="496.0" layoutY="376.0" mnemonicParsing="false" onAction="#buttonSubmit" prefHeight="46.0" prefWidth="151.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #FBD24B; -fx-background-radius: 15px; -fx-text-fill: #ffffff; -fx-font-size: 20px;" text="Enviar" />
+            <Button fx:id="button_submit" layoutX="496.0" layoutY="376.0" mnemonicParsing="false" onAction="#buttonSubmit" prefHeight="46.0" prefWidth="151.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #FBD24B; -fx-background-radius: 15px; -fx-text-fill: #ffffff; -fx-font-size: 20px;" text="Enviar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <TextArea fx:id="text_area_description_send" layoutX="435.0" layoutY="285.0" prefHeight="80.0" prefWidth="273.0" />
+            <ImageView fitHeight="143.0" fitWidth="257.0" layoutX="106.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pokemones-removebg-preview.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="view_three_details" layoutX="24.0" layoutY="4.0" visible="false">
@@ -206,7 +214,7 @@
             <Label fx:id="label_evoluciones" layoutX="422.0" layoutY="306.0" style="-fx-font-family: &quot;OCR A Extended&quot;;" text="Evoluciones:" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="view_one_battle" layoutX="25.0" layoutY="2.0" visible="false">
+      <AnchorPane fx:id="view_one_battle" layoutX="25.0" layoutY="2.0">
          <children>
             <Button fx:id="button_tittle" defaultButton="true" layoutX="510.0" layoutY="18.0" mnemonicParsing="false" onAction="#goToViewTwo" prefHeight="52.0" prefWidth="186.0" style="-fx-font-family: &quot;OCR A Extended&quot;; -fx-background-color: #ffffff; -fx-font-size: 15px; -fx-background-radius: 20px;" text="Base de Pokemones">
                <cursor>
