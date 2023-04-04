@@ -2,7 +2,7 @@ package com.example.wikimon_app;
 
 import java.util.ArrayList;
 
-public class Pokemones {
+public class Pokemones extends HelloController{
 
     String name;
     String image;
